@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -e
+
+for file in bash_profile bashrc gitconfig gitignore gvimrc vimrc tmux.conf; do
+  ln -sfhv "$file" "${HOME}/.$file"
+done
+
+if git --version &>/dev/null; then
+  git clone "https://github.com/gmarik/vundle.git" "${HOME}/.vim/bundle/vundle"
+  echo
+  echo "To install Vim bundles execute: \`vim +BundleInstall +qall\`"
+  echo
+fi
