@@ -9,6 +9,13 @@ for file in bash_profile bashrc gitconfig gitignore_global gvimrc vimrc tmux.con
 done
 
 echo
+
+if git --version &>/dev/null; then
+  echo "Setting up Git:"
+  git config --global core.excludesfile "${HOME}/.gitignore_global" && echo "Git global excludes file set"
+fi
+
+echo
 echo "Setting up Vim:"
 mkdir -p "${HOME}/.vim/.backup" && echo "Vim backup directory created"
 mkdir -p "${HOME}/.vim/.tmp" && echo "Vim tmp directory created"
