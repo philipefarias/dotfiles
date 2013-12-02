@@ -7,9 +7,10 @@ set number            " Show line numbers
 set ruler             " Show line and column number
 set cursorline        " Highlight the line the cursor is on
 set showcmd           " Show incomplete cmds at the bottom
+set laststatus=2      " Always show the status bar
 syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
-set guifont=Monaco\ for\ Powerline:h12 " If you're not in a terminal look first for gvimrc
+set guifont=Monaco\ for\ Powerline:h14 " If you're not in a terminal look first for gvimrc
 
 
 ""
@@ -76,18 +77,6 @@ set directory=~/.vim/.tmp//      " where to put swap files.
 
 
 ""
-"" Status line
-""
-
-if has("statusline") && !&cp
-  let g:airline_powerline_fonts = 1
-
-  " Normal Vim options
-  set laststatus=2  " always show the status bar
-endif
-
-
-""
 "" AutoCommands
 ""
 
@@ -98,13 +87,9 @@ if has("autocmd")
   endif
 
   " Set the Ruby filetype for a number of common Ruby files without .rb
-  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
+  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
   " Treat JSON files like JavaScript
   au BufNewFile,BufRead *.json set ft=javascript
-  " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-  au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
-  " Follow Zend Framework standards for PHP
-  au FileType php set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=80
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
@@ -154,6 +139,7 @@ Bundle 'altercation/vim-colors-solarized'
 
 Bundle 'othree/html5.vim'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'elixir-lang/vim-elixir'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'StanAngeloff/php.vim'
@@ -161,19 +147,33 @@ Bundle 'StanAngeloff/php.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'mmalecki/vim-node.js'
+Bundle 'leshill/vim-json'
 Bundle 'tpope/vim-haml'
 Bundle 'juvenn/mustache.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'timcharper/textile.vim'
+Bundle 'zaiste/tmux.vim'
 
+Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-sleuth'
 Bundle 'kien/ctrlp.vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'jszakmeister/vim-togglecursor'
 
 " Automatically detect file types
 filetype plugin indent on
+
+
+""
+"" Plugins configs
+""
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 
 ""
@@ -182,4 +182,4 @@ filetype plugin indent on
 
 se t_Co=256
 set background=dark
-color solarized
+colors solarized
