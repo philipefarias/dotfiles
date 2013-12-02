@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 set -e
 
-for file in bash_profile bashrc gitconfig gitignore gvimrc vimrc tmux.conf; do
-  ln -sfhv "$file" "${HOME}/.$file"
+here="$(cd "${0%/*}"; pwd)"
+
+echo "Linking dotfiles:"
+for file in bash_profile bashrc gitconfig gitignore_global gvimrc vimrc tmux.conf; do
+  ln -sfhv "$here/$file" "${HOME}/.$file"
 done
+
+echo
+echo "Setting up Vim:"
+mkdir -p "${HOME}/.vim/.backup" && echo "Vim backup directory created"
+mkdir -p "${HOME}/.vim/.tmp" && echo "Vim tmp directory created"
+echo
 
 if git --version &>/dev/null; then
   git clone "https://github.com/gmarik/vundle.git" "${HOME}/.vim/bundle/vundle"
