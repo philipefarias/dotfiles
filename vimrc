@@ -182,4 +182,4 @@ let g:airline#extensions#tabline#enabled = 1
 
 se t_Co=256
 set background=dark
-colors solarized
+silent! colors solarized
