@@ -3,3 +3,5 @@
 [user]
 	name = Philipe Farias
 	email = philipefarias@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
