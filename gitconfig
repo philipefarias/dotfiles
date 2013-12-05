@@ -5,3 +5,5 @@
 	email = philipefarias@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
+[color]
+	ui = true
