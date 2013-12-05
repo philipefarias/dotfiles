@@ -12,6 +12,9 @@ syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
 set guifont=Monaco\ for\ Powerline:h14 " If you're not in a terminal look first for gvimrc
 
+set ttimeout          " activate timeout feature
+set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
+
 
 ""
 "" Whitespace
