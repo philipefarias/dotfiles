@@ -10,3 +10,4 @@ color solarized
 set background=light
 set guifont=Monaco\ for\ Powerline:h14
 set guioptions-=T
+set guioptions-=r
