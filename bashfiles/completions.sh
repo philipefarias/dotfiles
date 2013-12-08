@@ -1,3 +1,5 @@
+current_dir=$(dirname $_)
+
 # RVM completion
 [[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
 
@@ -7,4 +9,4 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 # Rubygems completion from Nando Vieira (fnando)
-source ~/.bash/lib/completions/gem_completion.sh
+source "$current_dir/completions/gem_completion.sh"

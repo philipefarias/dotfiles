@@ -1,6 +1,7 @@
-source ~/.bash/lib/bash_colors.sh
-source ~/.bash/lib/prompt_tags/rvm_prompt.sh
-source ~/.bash/lib/prompt_tags/git_prompt.sh
+current_dir=$(dirname $_)
+source "$current_dir/bash_colors.sh"
+source "$current_dir/prompt_tags/rvm_prompt.sh"
+source "$current_dir/prompt_tags/git_prompt.sh"
 
 __prompt_tags () {
   local PROMPT_TAGS=""
