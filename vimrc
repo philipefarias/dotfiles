@@ -1,5 +1,5 @@
 ""
-"" Scripts and Bundles
+"" Macros and Bundles
 ""
 
 filetype off
@@ -102,6 +102,38 @@ set smartcase   " ... unless they contain at least one capital letter
 
 
 ""
+"" Theme
+""
+
+se t_Co=256
+set background=dark
+silent! colors solarized
+
+
+""
+"" Gui options
+""
+
+set guifont=Monofur\ for\ Powerline:h18 " If you're not in a terminal look first for gvimrc
+set guioptions-=T
+set guioptions-=r
+
+if has("gui_running")
+  set visualbell " Don't beep
+  set background=light
+  colors solarized
+
+  if has("gui_macvim")
+      set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
+  endif
+
+  if exists("g:enable_mvim_shift_arrow")
+    let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
+  endif
+endif
+
+
+""
 "" Wild settings
 ""
 
@@ -172,35 +204,3 @@ nnoremap <silent> <LocalLeader>rd :e ~/.vim/ <CR>
 " Tabs
 nnoremap <silent> <LocalLeader>[ :tabprev<CR>
 nnoremap <silent> <LocalLeader>] :tabnext<CR>
-
-
-""
-"" Theme
-""
-
-se t_Co=256
-set background=dark
-silent! colors solarized
-
-
-""
-"" Gui options
-""
-
-set guifont=Monofur\ for\ Powerline:h18 " If you're not in a terminal look first for gvimrc
-set guioptions-=T
-set guioptions-=r
-
-if has("gui_running")
-  set visualbell " Don't beep
-  set background=light
-  colors solarized
-
-  if has("gui_macvim")
-      set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
-  endif
-
-  if exists("g:enable_mvim_shift_arrow")
-    let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
-  endif
-endif
