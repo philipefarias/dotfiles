@@ -1,4 +1,59 @@
 ""
+"" Scripts and Bundles
+""
+
+filetype off
+" % to bounce from do to end etc.
+runtime! macros/matchit.vim
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+Bundle 'altercation/vim-colors-solarized'
+
+Bundle 'othree/html5.vim'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'StanAngeloff/php.vim'
+
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-cucumber'
+Bundle 'mmalecki/vim-node.js'
+Bundle 'leshill/vim-json'
+Bundle 'tpope/vim-haml'
+Bundle 'juvenn/mustache.vim'
+Bundle 'tpope/vim-markdown'
+Bundle 'timcharper/textile.vim'
+Bundle 'zaiste/tmux.vim'
+
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-sleuth'
+Bundle 'kien/ctrlp.vim'
+Bundle 'sickill/vim-pasta'
+Bundle 'godlygeek/tabular'
+Bundle 'bling/vim-airline'
+Bundle 'edkolev/tmuxline.vim'
+Bundle 'jszakmeister/vim-togglecursor'
+
+" Automatically detect file types
+filetype plugin indent on
+
+
+""
+"" Plugins configs
+""
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+
+""
 "" Basic Setup
 ""
 
@@ -117,61 +172,6 @@ nnoremap <silent> <LocalLeader>rd :e ~/.vim/ <CR>
 " Tabs
 nnoremap <silent> <LocalLeader>[ :tabprev<CR>
 nnoremap <silent> <LocalLeader>] :tabnext<CR>
-
-
-""
-"" Scripts and Bundles
-""
-
-filetype off
-" % to bounce from do to end etc.
-runtime! macros/matchit.vim
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-
-" My Bundles here:
-Bundle 'altercation/vim-colors-solarized'
-
-Bundle 'othree/html5.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'StanAngeloff/php.vim'
-
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-cucumber'
-Bundle 'mmalecki/vim-node.js'
-Bundle 'leshill/vim-json'
-Bundle 'tpope/vim-haml'
-Bundle 'juvenn/mustache.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'timcharper/textile.vim'
-Bundle 'zaiste/tmux.vim'
-
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-sleuth'
-Bundle 'kien/ctrlp.vim'
-Bundle 'sickill/vim-pasta'
-Bundle 'godlygeek/tabular'
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'jszakmeister/vim-togglecursor'
-
-" Automatically detect file types
-filetype plugin indent on
-
-
-""
-"" Plugins configs
-""
-
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 
 
 ""
