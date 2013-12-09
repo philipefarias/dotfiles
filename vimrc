@@ -10,7 +10,6 @@ set showcmd           " Show incomplete cmds at the bottom
 set laststatus=2      " Always show the status bar
 syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
-set guifont=Monaco\ for\ Powerline:h14 " If you're not in a terminal look first for gvimrc
 
 set ttimeout          " activate timeout feature
 set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
@@ -26,10 +25,6 @@ set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 set backspace=indent,eol,start    " backspace through everything in insert mode
-
-if exists("g:enable_mvim_shift_arrow")
-  let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
-endif
 
 " List chars
 set listchars=""                      " Reset the listchars
@@ -186,3 +181,26 @@ let g:airline#extensions#tabline#enabled = 1
 se t_Co=256
 set background=dark
 silent! colors solarized
+
+
+""
+"" Gui options
+""
+
+set guifont=Monofur\ for\ Powerline:h18 " If you're not in a terminal look first for gvimrc
+set guioptions-=T
+set guioptions-=r
+
+if has("gui_running")
+  set visualbell " Don't beep
+  set background=light
+  colors solarized
+
+  if has("gui_macvim")
+      set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
+  endif
+
+  if exists("g:enable_mvim_shift_arrow")
+    let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
+  endif
+endif
