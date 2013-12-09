@@ -165,8 +165,8 @@ endif
 
 " Reload and edit vimrc
 nnoremap <silent> <LocalLeader>rs :source ~/.vimrc<CR>
-nnoremap <silent> <LocalLeader>rt :tabnew ~/.vim/vimrc<CR>
-nnoremap <silent> <LocalLeader>re :e ~/.vim/vimrc<CR>
+nnoremap <silent> <LocalLeader>rt :tabnew ~/.dotfiles/vimrc<CR>
+nnoremap <silent> <LocalLeader>re :e ~/.dotfiles/vimrc<CR>
 nnoremap <silent> <LocalLeader>rd :e ~/.vim/ <CR>
 
 " Tabs
