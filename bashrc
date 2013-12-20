@@ -1,6 +1,3 @@
-# Warning! Some code from here till the end was stolen
-# Some are from Gary Bernhardt (http://bitbucket.org/garybernhardt/dotfiles/)
-
 # Env variables
 source ~/.dotfiles/bashfiles/exports.sh
 
