@@ -1,6 +1,6 @@
 # Add paths that should have been there by default
-export PATH=${PATH}:/usr/local/sbin
-export PATH=${PATH}:/usr/local/bin
+export PATH="/usr/local/sbin:${PATH}"
+export PATH="/usr/local/bin:${PATH}"
 export PATH="~/bin:$PATH"
 
 # Unbreak broken, non-colored terminal
