@@ -5,8 +5,10 @@ export PATH="~/bin:$PATH"
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-256color'
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color"
+#export LSCOLORS='ExGxBxDxCxEgEdxbxgxcxd'
+# Better colors to match the solarized theme
+export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
+export GREP_OPTIONS='--color'
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups
