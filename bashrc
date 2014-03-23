@@ -10,6 +10,9 @@ source ~/.dotfiles/bashfiles/completions.sh
 # Custom prompt
 source ~/.dotfiles/bashfiles/prompt.sh
 
+# Git author attribution helper for pair programmers
+source ~/.dotfiles/bashfiles/hitch.sh
+
 # Ruby Version Manager
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
