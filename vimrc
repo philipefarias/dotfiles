@@ -1,4 +1,24 @@
 ""
+"" Basic Setup
+""
+
+" Use Vim settings, rather then Vi settings. This setting must be as early
+" as possible, as it has side effects.
+set nocompatible
+
+set number            " Show line numbers
+set ruler             " Show line and column number
+set cursorline        " Highlight the line the cursor is on
+set showcmd           " Show incomplete cmds at the bottom
+set laststatus=2      " Always show the status bar
+syntax enable         " Turn on syntax highlighting allowing local overrides
+set encoding=utf-8    " Set default encoding to UTF-8
+
+set ttimeout          " activate timeout feature
+set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
+
+
+""
 "" Macros and Bundles
 ""
 
@@ -51,23 +71,6 @@ filetype plugin indent on
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-
-""
-"" Basic Setup
-""
-
-set nocompatible      " Use vim, no vi defaults
-set number            " Show line numbers
-set ruler             " Show line and column number
-set cursorline        " Highlight the line the cursor is on
-set showcmd           " Show incomplete cmds at the bottom
-set laststatus=2      " Always show the status bar
-syntax enable         " Turn on syntax highlighting allowing local overrides
-set encoding=utf-8    " Set default encoding to UTF-8
-
-set ttimeout          " activate timeout feature
-set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
 
 
 ""
