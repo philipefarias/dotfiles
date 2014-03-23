@@ -4,6 +4,11 @@
 # Based on Geoffrey Grosenbach's
 #   https://github.com/topfunky/zsh-simple/blob/master/bin/git-cwd-info
 
+function __git_dirty() {
+  git diff --quiet HEAD &>/dev/null
+  [ $? == 1 ] && echo "⚠"
+}
+
 __git_prompt_tag () {
   GIT_REPO_PATH=`git rev-parse --git-dir 2>/dev/null`
   GIT_PROMPT=""
@@ -22,12 +27,7 @@ __git_prompt_tag () {
       GIT_MODE=" +rebase"
     fi
 
-    GIT_DIRTY=""
-    if [[ "$GIT_REPO_PATH" != '.' && `git ls-files -dom` != "" ]]; then
-      GIT_DIRTY=" ${BROWN}⚠${RESET}"
-    fi
-
-    GIT_PROMPT="${LIGHT_GREEN}$GIT_BRANCH ${BLACK}$GIT_COMMIT_ID${RESET}$GIT_MODE$GIT_DIRTY"
+    GIT_PROMPT="${LIGHT_GREEN}$GIT_BRANCH ${BLACK}$GIT_COMMIT_ID${RESET}$GIT_MODE ${BROWN}$(__git_dirty)${RESET}"
   fi
 
   echo "$GIT_PROMPT"
