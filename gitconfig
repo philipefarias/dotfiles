@@ -1,9 +1,20 @@
 [credential]
   helper = osxkeychain
-[core]
-  excludesfile = ~/.gitignore_global
 [color]
   ui = auto
+[alias]
+  aa = add --all
+  ap = add --patch
+  ca = commit --amend
+  ci = commit -v
+  co = checkout
+  l  = log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges
+  lg = log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --graph
+  pr = !hub pull-request
+  st = status
+  up = !git fetch origin && git rebase origin/master
+[core]
+  excludesfile = ~/.gitignore_global
 [include]
   path = .gitconfig.local
 [commit]
