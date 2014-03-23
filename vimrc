@@ -11,12 +11,15 @@ set ruler             " Show line and column number
 set cursorline        " Highlight the line the cursor is on
 set showcmd           " Show incomplete cmds at the bottom
 set laststatus=2      " Always show the status bar
-syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
-
 set ttimeout          " activate timeout feature
 set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
 
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  syntax on
+endif
 
 ""
 "" Macros and Bundles
