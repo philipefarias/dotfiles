@@ -45,6 +45,7 @@ Bundle 'kchmck/vim-coffee-script'
 
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'mmalecki/vim-node.js'
 Bundle 'leshill/vim-json'
 Bundle 'tpope/vim-haml'
@@ -221,3 +222,8 @@ nnoremap <silent> <LocalLeader>rd :e ~/.vim/ <CR>
 " Tabs
 nnoremap <silent> <LocalLeader>[ :tabprev<CR>
 nnoremap <silent> <LocalLeader>] :tabnext<CR>
+
+" vim-rspec mappings
+nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
+nnoremap <Leader>s :call RunNearestSpec()<CR>
+nnoremap <Leader>l :call RunLastSpec()<CR>
