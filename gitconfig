@@ -1,10 +1,8 @@
 [credential]
-	helper = osxkeychain
-[user]
-	name = Philipe Farias
-	email = philipefarias@gmail.com
+  helper = osxkeychain
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = /usr/bin/vim
+  excludesfile = ~/.gitignore_global
 [color]
-	ui = true
+  ui = auto
+[include]
+  path = .gitconfig.local
