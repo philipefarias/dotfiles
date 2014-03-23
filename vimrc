@@ -36,6 +36,7 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'noahfrederick/vim-hemisu'
 
 Bundle 'othree/html5.vim'
 Bundle 'vim-ruby/vim-ruby'
