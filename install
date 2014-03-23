@@ -4,7 +4,7 @@ set -e
 here="$(cd "${0%/*}"; pwd)"
 
 echo "===> Linking dotfiles:"
-for file in bash_profile bashrc gitconfig gitignore_global vimrc tmux.conf agignore; do
+for file in bash_profile bashrc gitconfig gitignore_global gitmessage vimrc tmux.conf agignore; do
   ln -sfhv "$here/$file" "${HOME}/.$file"
 done
 
