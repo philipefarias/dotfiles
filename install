@@ -17,7 +17,7 @@ mkdir -p "${HOME}/.vim/.tmp" && echo "Vim tmp directory created"
 
 if git --version &>/dev/null; then
   echo "Getting Vundle"
-  git clone "https://github.com/gmarik/vundle.git" "${HOME}/.vim/bundle/vundle"
-  vim +BundleInstall +qall && echo "Vim bundles installed"
+  git clone "https://github.com/gmarik/Vundle.vim.git" "${HOME}/.vim/bundle/Vundle.vim"
+  vim +PluginInstall +qall && echo "Vim plugins installed"
   echo
 fi

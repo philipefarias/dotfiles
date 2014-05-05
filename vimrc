@@ -22,50 +22,52 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
 endif
 
 ""
-"" Macros and Bundles
+"" Macros and Plugins
 ""
 
 filetype off
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'noahfrederick/vim-hemisu'
+" My Plugins here:
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'noahfrederick/vim-hemisu'
 
-Bundle 'othree/html5.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'othree/html5.vim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-cucumber'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'mmalecki/vim-node.js'
-Bundle 'leshill/vim-json'
-Bundle 'tpope/vim-haml'
-Bundle 'juvenn/mustache.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'zaiste/tmux.vim'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-cucumber'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'mmalecki/vim-node.js'
+Plugin 'leshill/vim-json'
+Plugin 'tpope/vim-haml'
+Plugin 'juvenn/mustache.vim'
+Plugin 'tpope/vim-markdown'
+Plugin 'zaiste/tmux.vim'
 
-Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-sleuth'
-Bundle 'kien/ctrlp.vim'
-Bundle 'sickill/vim-pasta'
-Bundle 'godlygeek/tabular'
-Bundle 'bling/vim-airline'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'jszakmeister/vim-togglecursor'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sleuth'
+Plugin 'kien/ctrlp.vim'
+Plugin 'sickill/vim-pasta'
+Plugin 'godlygeek/tabular'
+Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
+Plugin 'jszakmeister/vim-togglecursor'
 
-" Automatically detect file types
-filetype plugin indent on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
 ""
