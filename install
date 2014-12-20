@@ -10,14 +10,32 @@ done
 
 echo
 
+echo "===> Linking binaries:"
+if [ ! -d "${HOME}/.bin" ]; then
+  mkdir "${HOME}/.bin"
+fi
+
+for file in `ls "$here/bin"`; do
+  ln -sfhv "$here/bin/$file" "${HOME}/.bin/$file"
+done
+
+echo
+
 echo
 echo "===> Setting up Vim:"
 mkdir -p "${HOME}/.vim/.backup" && echo "Vim backup directory created"
 mkdir -p "${HOME}/.vim/.tmp" && echo "Vim tmp directory created"
 
 if git --version &>/dev/null; then
-  echo "Getting Vundle"
-  git clone "https://github.com/gmarik/Vundle.vim.git" "${HOME}/.vim/bundle/Vundle.vim"
+  vundle_dir="${HOME}/.vim/bundle/Vundle.vim"
+
+  if [ ! -d "$vundle_dir" ]; then
+    echo "Getting Vundle"
+    git clone "https://github.com/gmarik/Vundle.vim.git" "$vundle_dir"
+  else
+    echo "Vundle detected, just installing plugins..."
+  fi
+
   vim +PluginInstall +qall && echo "Vim plugins installed"
   echo
 fi
