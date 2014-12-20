@@ -15,7 +15,12 @@
   up = !git fetch origin && git rebase origin/master
 [core]
   excludesfile = ~/.gitignore_global
-[include]
-  path = .gitconfig.local
+[push]
+  default = simple
 [commit]
   template = ~/.gitmessage
+[include]
+  path = .gitconfig.local
+[user]
+  name = Philipe Farias
+  email = philipefarias@gmail.com

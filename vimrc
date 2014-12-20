@@ -14,6 +14,7 @@ set laststatus=2      " Always show the status bar
 set encoding=utf-8    " Set default encoding to UTF-8
 set ttimeout          " activate timeout feature
 set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
+set clipboard=unnamed " use clipboard with mvim
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -44,6 +45,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
 
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-cucumber'

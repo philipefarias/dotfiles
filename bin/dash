@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# Search term in Dash.app.
+#
+# dash rails:activemodel
+
+set -e
+
+term=$1
+shift
+
+open dash://"$term"
