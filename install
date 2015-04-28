@@ -26,16 +26,41 @@ echo "===> Setting up Vim:"
 mkdir -p "${HOME}/.vim/.backup" && echo "Vim backup directory created"
 mkdir -p "${HOME}/.vim/.tmp" && echo "Vim tmp directory created"
 
-if git --version &>/dev/null; then
-  vundle_dir="${HOME}/.vim/bundle/Vundle.vim"
+echo
+echo "===> Setting up tmux:"
+mkdir -p "${HOME}/.tmux/plugins" && echo "tmux plugins directory created"
 
-  if [ ! -d "$vundle_dir" ]; then
-    echo "Getting Vundle"
-    git clone "https://github.com/gmarik/Vundle.vim.git" "$vundle_dir"
+if git --version &>/dev/null; then
+  if [ vim --version &>/dev/null ] || [ nvim --version &>/dev/null ]; then
+    vundle_dir="${HOME}/.vim/bundle/Vundle.vim"
+
+    if [ ! -d "$vundle_dir" ]; then
+      echo "Getting Vundle"
+      git clone "https://github.com/gmarik/Vundle.vim.git" "$vundle_dir"
+    else
+      echo "Vundle detected, just installing plugins..."
+    fi
+
+    vim +PluginInstall +qall && echo "Vim plugins installed"
+    echo
   else
-    echo "Vundle detected, just installing plugins..."
+    echo "Vim or NeoVim not installed. Please install it and run this script again."
   fi
 
-  vim +PluginInstall +qall && echo "Vim plugins installed"
-  echo
+  if tmux -V &>dev/null; then
+    tpm_dir="${HOME}/.tmux/plugins/tpm"
+
+    if [ ! -d "$tpm_dir" ]; then
+      echo "Getting TPM (Tmux Plugin Manager)"
+      git clone "https://github.com/tmux-plugins/tpm" "$tpm_dir"
+    else
+      echo "TPM detected, just installing plugins..."
+    fi
+
+    tmux start-server
+    tmux new-session -d
+    ~/.tmux/plugins/tpm/scripts/install_plugins.sh && echo "tmux plugins installed"
+  else
+    echo "Tmux not installed. Please install it and run this script again."
+  fi
 fi
