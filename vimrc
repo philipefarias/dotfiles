@@ -46,6 +46,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'pangloss/vim-javascript'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
+Plugin 'exu/pgsql.vim'
 
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-cucumber'
@@ -96,6 +97,9 @@ endif
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
+
+" use postgres syntax as default for sql
+let g:sql_type_default = 'pgsql'
 
 
 ""
