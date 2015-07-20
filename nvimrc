@@ -30,48 +30,45 @@ filetype off
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Initialize plug.vim
+call plug#begin('~/.nvim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'noahfrederick/vim-hemisu'
 
-" My Plugins here:
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'noahfrederick/vim-hemisu'
+Plug 'othree/html5.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'elixir-lang/vim-elixir'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
+Plug 'exu/pgsql.vim'
 
-Plugin 'othree/html5.vim'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
-Plugin 'exu/pgsql.vim'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-cucumber'
+Plug 'janko-m/vim-test'
+Plug 'mmalecki/vim-node.js'
+Plug 'leshill/vim-json'
+Plug 'tpope/vim-haml'
+Plug 'juvenn/mustache.vim'
+Plug 'tpope/vim-markdown'
+Plug 'zaiste/tmux.vim'
 
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-cucumber'
-Plugin 'janko-m/vim-test'
-Plugin 'mmalecki/vim-node.js'
-Plugin 'leshill/vim-json'
-Plugin 'tpope/vim-haml'
-Plugin 'juvenn/mustache.vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'zaiste/tmux.vim'
-
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-sleuth'
-Plugin 'kien/ctrlp.vim'
-Plugin 'sickill/vim-pasta'
-Plugin 'godlygeek/tabular'
-Plugin 'bling/vim-airline'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'jszakmeister/vim-togglecursor'
-Plugin 'nelstrom/vim-qargs'
-Plugin 'rking/ag.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
+Plug 'kien/ctrlp.vim'
+Plug 'sickill/vim-pasta'
+Plug 'godlygeek/tabular'
+Plug 'bling/vim-airline'
+Plug 'edkolev/tmuxline.vim'
+Plug 'jszakmeister/vim-togglecursor'
+Plug 'nelstrom/vim-qargs'
+Plug 'rking/ag.vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
+
 filetype plugin indent on    " required
 
 
