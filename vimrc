@@ -137,7 +137,7 @@ set smartcase   " ... unless they contain at least one capital letter
 
 se t_Co=256
 set background=dark
-silent! colors solarized
+silent! colors seoul256
 
 
 ""
@@ -151,7 +151,7 @@ set guioptions-=r
 if has("gui_running")
   set visualbell " Don't beep
   set background=light
-  colors solarized
+  colors seoul256
 
   if has("gui_macvim")
       set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
