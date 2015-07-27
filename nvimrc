@@ -47,6 +47,7 @@ Plug 'exu/pgsql.vim'
 
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-cucumber'
+Plug 'sunaku/vim-ruby-minitest'
 Plug 'janko-m/vim-test'
 Plug 'mmalecki/vim-node.js'
 Plug 'leshill/vim-json'
