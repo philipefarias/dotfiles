@@ -96,11 +96,16 @@ endif
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 
-" make vim-test commands execute using neovim terminal
-let test#strategy = "neovim"
-
 " use postgres syntax as default for sql
 let g:sql_type_default = 'pgsql'
+
+" custom strategy for vim-test to execute commands using neovim terminal in a
+" split window
+function! SplitStrategy(cmd)
+  botright new | call termopen(a:cmd) | startinsert
+endfunction
+let g:test#custom_strategies = {'terminal_split': function('SplitStrategy')}
+let g:test#strategy = 'terminal_split'
 
 
 ""
