@@ -31,7 +31,7 @@ filetype off
 runtime! macros/matchit.vim
 
 " Initialize plug.vim
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'noahfrederick/vim-hemisu'
@@ -98,6 +98,16 @@ let g:syntastic_check_on_open=1
 
 " use postgres syntax as default for sql
 let g:sql_type_default = 'pgsql'
+
+if has("nvim")
+  " custom strategy for vim-test to execute commands using neovim terminal
+  " in a split window
+  function! NeovimSplitStrategy(cmd)
+    botright new | call termopen(a:cmd) | startinsert
+  endfunction
+  let g:test#custom_strategies = {'terminal_split': function('NeovimSplitStrategy')}
+  let g:test#strategy = 'terminal_split'
+endif
 
 
 ""
