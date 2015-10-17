@@ -34,7 +34,6 @@ runtime! macros/matchit.vim
 call plug#begin('~/.vim/plugged')
 
 Plug 'altercation/vim-colors-solarized'
-Plug 'noahfrederick/vim-hemisu'
 Plug 'junegunn/seoul256.vim'
 
 Plug 'othree/html5.vim'
