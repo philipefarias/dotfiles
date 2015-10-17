@@ -67,6 +67,7 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'nelstrom/vim-qargs'
 Plug 'rking/ag.vim'
+Plug 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call plug#end()
