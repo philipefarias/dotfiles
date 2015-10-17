@@ -56,6 +56,7 @@ Plug 'tpope/vim-markdown'
 Plug 'zaiste/tmux.vim'
 
 Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sleuth'
 Plug 'sickill/vim-pasta'
