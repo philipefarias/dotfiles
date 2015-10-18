@@ -39,6 +39,7 @@ Plug 'junegunn/seoul256.vim'
 
 " Ruby and Rails
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-haml'
