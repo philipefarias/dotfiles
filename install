@@ -4,7 +4,7 @@ set -e
 here="$(cd "${0%/*}"; pwd)"
 
 echo "===> Linking dotfiles:"
-for file in bash_profile bashrc gitconfig gitignore_global gitmessage vimrc nvimrc tmux.conf agignore; do
+for file in bash_profile bashrc gitconfig gitignore_global gitmessage vimrc tmux.conf agignore; do
   ln -sfhv "$here/$file" "${HOME}/.$file"
 done
 
@@ -19,36 +19,42 @@ for file in `ls "$here/bin"`; do
   ln -sfhv "$here/bin/$file" "${HOME}/.bin/$file"
 done
 
-echo
-
-echo
-echo "===> Setting up Vim:"
-mkdir -p "${HOME}/.vim/.backup" && echo "Vim backup directory created"
-mkdir -p "${HOME}/.vim/.tmp" && echo "Vim tmp directory created"
-
-echo
-echo "===> Setting up tmux:"
-mkdir -p "${HOME}/.tmux/plugins" && echo "tmux plugins directory created"
-
 if git --version &>/dev/null; then
-  if [ vim --version &>/dev/null ] || [ nvim --version &>/dev/null ]; then
-    vundle_dir="${HOME}/.vim/bundle/Vundle.vim"
+  echo
+  echo "===> Setting up Vim:"
+  if vim --version &>/dev/null; then
+    vim_dir="${HOME}/.vim"
+    plug_dir="$vim_dir/autoload/plug.vim"
 
-    if [ ! -d "$vundle_dir" ]; then
-      echo "Getting Vundle"
-      git clone "https://github.com/gmarik/Vundle.vim.git" "$vundle_dir"
+    mkdir -p "$vim_dir/.backup" && echo "Vim backup directory created"
+    mkdir -p "$vim_dir/.tmp" && echo "Vim tmp directory created"
+
+    if [ ! -d "$plug_dir" ]; then
+      echo "Getting Plug"
+      curl -fLo "$plug_dir" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     else
-      echo "Vundle detected, just installing plugins..."
+      echo "Plug detected, just installing plugins..."
     fi
 
-    vim +PluginInstall +qall && echo "Vim plugins installed"
+    vim +PlugInstall +qall && echo "Vim plugins installed"
     echo
+
+    if nvim --version &>/dev/null; then
+      echo "===> Setting up Neovim:"
+      ln -sfhv "${HOME}/.vim" "${HOME}/.nvim"
+      ln -sfhv "${HOME}/.vimrc" "${HOME}/.nvimrc"
+    fi
   else
-    echo "Vim or NeoVim not installed. Please install it and run this script again."
+    echo "Vim not installed. Please install it and run this script again."
   fi
 
-  if tmux -V &>dev/null; then
-    tpm_dir="${HOME}/.tmux/plugins/tpm"
+  echo
+  echo "===> Setting up tmux:"
+  if tmux -V &>/dev/null; then
+    tmux_dir="${HOME}/.tmux"
+    tpm_dir="$tmux_dir/plugins/tpm"
+
+    mkdir -p "$tmux_dir/plugins" && echo "tmux plugins directory created"
 
     if [ ! -d "$tpm_dir" ]; then
       echo "Getting TPM (Tmux Plugin Manager)"
@@ -59,8 +65,10 @@ if git --version &>/dev/null; then
 
     tmux start-server
     tmux new-session -d
-    ~/.tmux/plugins/tpm/scripts/install_plugins.sh && echo "tmux plugins installed"
+    $tmux_dir/plugins/tpm/scripts/install_plugins.sh && echo "tmux plugins installed"
   else
     echo "Tmux not installed. Please install it and run this script again."
   fi
+else
+  echo "Git not installed. Please install it and run this script again."
 fi
