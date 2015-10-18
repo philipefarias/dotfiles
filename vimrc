@@ -33,41 +33,45 @@ runtime! macros/matchit.vim
 " Initialize plug.vim
 call plug#begin('~/.vim/plugged')
 
+" Color schemes
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/seoul256.vim'
 
-Plug 'othree/html5.vim'
+" Ruby and Rails
 Plug 'vim-ruby/vim-ruby'
-Plug 'elixir-lang/vim-elixir'
-Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
-Plug 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
-Plug 'exu/pgsql.vim'
-
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-haml'
 Plug 'tpope/vim-cucumber'
 Plug 'sunaku/vim-ruby-minitest'
-Plug 'janko-m/vim-test'
-Plug 'mmalecki/vim-node.js'
+
+" Other languages
+Plug 'othree/html5.vim'
 Plug 'leshill/vim-json'
-Plug 'tpope/vim-haml'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mmalecki/vim-node.js'
+Plug 'elixir-lang/vim-elixir'
+Plug 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
 Plug 'juvenn/mustache.vim'
 Plug 'tpope/vim-markdown'
-Plug 'zaiste/tmux.vim'
+Plug 'exu/pgsql.vim'
 
+" Helpers and tooling
+Plug 'janko-m/vim-test'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-vinegar'
-Plug 'sickill/vim-pasta'
-Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'zaiste/tmux.vim'
 Plug 'bling/vim-airline'
 Plug 'edkolev/tmuxline.vim'
+Plug 'sickill/vim-pasta'
+Plug 'godlygeek/tabular'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'nelstrom/vim-qargs'
 Plug 'rking/ag.vim'
-Plug 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call plug#end()
