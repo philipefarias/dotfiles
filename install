@@ -5,7 +5,7 @@ here="$(cd "${0%/*}"; pwd)"
 
 echo "===> Linking dotfiles:"
 for file in bash_profile bashrc gitconfig gitignore_global gitmessage vimrc tmux.conf agignore; do
-  ln -sfhv "$here/$file" "${HOME}/.$file"
+  ln -sfv "$here/$file" "${HOME}/.$file"
 done
 
 echo
@@ -16,7 +16,7 @@ if [ ! -d "${HOME}/.bin" ]; then
 fi
 
 for file in `ls "$here/bin"`; do
-  ln -sfhv "$here/bin/$file" "${HOME}/.bin/$file"
+  ln -sfv "$here/bin/$file" "${HOME}/.bin/$file"
 done
 
 if git --version &>/dev/null; then
@@ -45,8 +45,8 @@ if git --version &>/dev/null; then
         mkdir -p $XDG_CONFIG_HOME}
       fi
 
-      ln -sfhv ~/.vim $XDG_CONFIG_HOME/nvim
-      ln -sfhv ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+      ln -sfv ~/.vim $XDG_CONFIG_HOME/nvim
+      ln -sfv ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
     fi
   else
     echo "Vim not installed. Please install it and run this script again."
