@@ -41,8 +41,12 @@ if git --version &>/dev/null; then
 
     if nvim --version &>/dev/null; then
       echo "===> Setting up Neovim:"
-      ln -sfhv "${HOME}/.vim" "${HOME}/.nvim"
-      ln -sfhv "${HOME}/.vimrc" "${HOME}/.nvimrc"
+      if [ ! -d "${XDG_CONFIG_HOME:=$HOME/.config}" ]; then
+        mkdir -p $XDG_CONFIG_HOME}
+      fi
+
+      ln -sfhv ~/.vim $XDG_CONFIG_HOME/nvim
+      ln -sfhv ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
     fi
   else
     echo "Vim not installed. Please install it and run this script again."
