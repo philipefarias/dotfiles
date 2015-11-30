@@ -4,9 +4,10 @@ current_dir=$(dirname $_)
 [[ -r $rvm_path/scripts/completion ]] && source $rvm_path/scripts/completion
 
 # Must have Homebrew installed and 'bash_completion' with it
-if [ -f `brew --prefix`/etc/bash_completion ]; then
+if [ "$(uname)" == "Darwin" ] && [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
 
 # Rubygems completion from Nando Vieira (fnando)
 source "$current_dir/completions/gem_completion.sh"
