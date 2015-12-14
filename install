@@ -69,7 +69,7 @@ if git --version &>/dev/null; then
 
     tmux start-server
     tmux new-session -d
-    $tmux_dir/plugins/tpm/scripts/install_plugins.sh && echo "tmux plugins installed"
+    $tmux_dir/plugins/tpm/bin/install_plugins && echo "tmux plugins installed"
   else
     echo "Tmux not installed. Please install it and run this script again."
   fi
