@@ -42,7 +42,7 @@ if git --version &>/dev/null; then
     if nvim --version &>/dev/null; then
       echo "===> Setting up Neovim:"
       if [ ! -d "${XDG_CONFIG_HOME:=$HOME/.config}" ]; then
-        mkdir -p $XDG_CONFIG_HOME}
+        mkdir -p $XDG_CONFIG_HOME
       fi
 
       ln -sfv ~/.vim $XDG_CONFIG_HOME/nvim
