@@ -56,6 +56,7 @@ Plug 'elixir-lang/vim-elixir'
 Plug 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
 Plug 'juvenn/mustache.vim'
 Plug 'tpope/vim-markdown'
+Plug 'reedes/vim-pencil'
 Plug 'exu/pgsql.vim'
 
 " Helpers and tooling
