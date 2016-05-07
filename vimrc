@@ -65,7 +65,7 @@ Plug 'exu/pgsql.vim'
 
 " Helpers and tooling
 Plug 'janko-m/vim-test'
-Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-vinegar'
@@ -106,8 +106,8 @@ if executable('ag')
   let g:ctrlp_use_caching = 0
 endif
 
-" configure syntastic syntax checking to check on open as well as save
-let g:syntastic_check_on_open=1
+" configure neomake to run when saving and opening a buffer
+autocmd! BufWritePost,BufEnter * Neomake
 
 " use postgres syntax as default for sql
 let g:sql_type_default = 'pgsql'
