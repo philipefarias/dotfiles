@@ -2,25 +2,29 @@
 "" Basic Setup
 ""
 
-" Use Vim settings, rather then Vi settings. This setting must be as early
-" as possible, as it has side effects.
-set nocompatible
-
 set number            " Show line numbers
 set ruler             " Show line and column number
 set cursorline        " Highlight the line the cursor is on
 set showcmd           " Show incomplete cmds at the bottom
-set laststatus=2      " Always show the status bar
-set encoding=utf-8    " Set default encoding to UTF-8
 set ttimeout          " activate timeout feature
 set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
 set clipboard=unnamed " use clipboard with mvim
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
+" Settings that aren't needed by neovim (usually they are set by default)
+if !has('nvim')
+  " Use Vim settings, rather then Vi settings. This setting must be as early
+  " as possible, as it has side effects.
+  set nocompatible
+
+  set encoding=utf-8 " Set default encoding to UTF-8
+  set laststatus=2   " Always show the status bar
+
+  " Switch syntax highlighting on, when the terminal has colors
+  " Also switch on highlighting the last used search pattern.
+  if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+    syntax on
+  endif
+end
 
 ""
 "" Macros and Plugins
@@ -117,12 +121,11 @@ endif
 "" Whitespace
 ""
 
-set nowrap                        " don't wrap lines
-set tabstop=2                     " a tab is two spaces
-set shiftwidth=2                  " an autoindent (with <<) is two spaces
-set expandtab                     " use spaces, not tabs
-set list                          " Show invisible characters
-set backspace=indent,eol,start    " backspace through everything in insert mode
+set nowrap       " don't wrap lines
+set tabstop=2    " a tab is two spaces
+set shiftwidth=2 " an autoindent (with <<) is two spaces
+set expandtab    " use spaces, not tabs
+set list         " Show invisible characters
 
 " List chars
 set listchars=""                      " Reset the listchars
@@ -133,15 +136,22 @@ set listchars+=extends:»              " The character to show in the last colum
 set listchars+=precedes:«             " The character to show in the last column when wrap is
                                       " off and the line continues beyond the right of the screen
 
+if !has('nvim')
+  set backspace=indent,eol,start " backspace through everything in insert mode
+end
+
 
 ""
 "" Searching
 ""
 
-set hlsearch    " highlight matches
-set incsearch   " incremental searching
-set ignorecase  " searches are case insensitive...
-set smartcase   " ... unless they contain at least one capital letter
+set ignorecase " searches are case insensitive...
+set smartcase  " ... unless they contain at least one capital letter
+
+if !has('nvim')
+  set hlsearch  " highlight matches
+  set incsearch " incremental searching
+end
 
 
 ""
