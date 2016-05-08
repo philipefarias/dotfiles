@@ -67,6 +67,7 @@ Plug 'exu/pgsql.vim'
 
 " Helpers and tooling
 Plug 'janko-m/vim-test'
+Plug 'kassio/neoterm'
 Plug 'benekastah/neomake'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-sleuth'
@@ -114,8 +115,10 @@ autocmd! BufWritePost,BufEnter * Neomake
 " use postgres syntax as default for sql
 let g:sql_type_default = 'pgsql'
 
+" configure vim-test and neoterm
 if has("nvim")
-  let g:test#strategy = 'neovim'
+  let g:test#strategy = 'neoterm'
+  let g:neoterm_run_tests_bg = 1
 endif
 
 
