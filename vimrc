@@ -8,6 +8,7 @@ set cursorline             " Highlight the line the cursor is on
 set showcmd                " Show incomplete cmds at the bottom
 set ttimeout               " activate timeout feature
 set ttimeoutlen=100        " decrease timeout for faster insert with 'O'
+set updatetime=250         " Decrease time for faster gitgutter refresh
 set clipboard+=unnamedplus " use the clipboard for all operations
 set noshowmode             " Don't show vim mode below the statusline
 
