@@ -2,14 +2,14 @@
 "" Basic Setup
 ""
 
-set number            " Show line numbers
-set ruler             " Show line and column number
-set cursorline        " Highlight the line the cursor is on
-set showcmd           " Show incomplete cmds at the bottom
-set ttimeout          " activate timeout feature
-set ttimeoutlen=100   " decrease timeout for faster insert with 'O'
-set clipboard=unnamed " use clipboard with mvim
-set noshowmode        " Don't show vim mode below the statusline
+set number                 " Show line numbers
+set ruler                  " Show line and column number
+set cursorline             " Highlight the line the cursor is on
+set showcmd                " Show incomplete cmds at the bottom
+set ttimeout               " activate timeout feature
+set ttimeoutlen=100        " decrease timeout for faster insert with 'O'
+set clipboard+=unnamedplus " use the clipboard for all operations
+set noshowmode             " Don't show vim mode below the statusline
 
 " Settings that aren't needed by neovim (usually they are set by default)
 if !has('nvim')
