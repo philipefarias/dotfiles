@@ -68,7 +68,7 @@ Plug 'exu/pgsql.vim'
 " Helpers and tooling
 Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
-Plug 'benekastah/neomake'
+Plug 'neomake/neomake'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-vinegar'
