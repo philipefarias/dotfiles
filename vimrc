@@ -63,7 +63,7 @@ Plug 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
 Plug 'juvenn/mustache.vim'
 Plug 'tpope/vim-markdown'
 Plug 'reedes/vim-pencil'
-Plug 'exu/pgsql.vim'
+Plug 'lifepillar/pgsql.vim'
 
 " Helpers and tooling
 Plug 'janko-m/vim-test'
