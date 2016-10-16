@@ -68,7 +68,7 @@ Plug 'lifepillar/pgsql.vim'
 " Helpers and tooling
 Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
-Plug 'neomake/neomake'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-vinegar'
@@ -103,9 +103,6 @@ if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
 endif
-
-" configure neomake to run when saving and opening a buffer
-autocmd! BufWritePost,BufEnter * Neomake
 
 " use postgres syntax as default for sql
 let g:sql_type_default = 'pgsql'
@@ -264,3 +261,7 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
+
+" ALE mappings to navigate between warnings and errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
