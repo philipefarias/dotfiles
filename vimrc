@@ -42,6 +42,7 @@ call plug#begin('~/.vim/plugged')
 " Color schemes
 Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
 
 " Ruby and Rails
 Plug 'vim-ruby/vim-ruby'
@@ -95,6 +96,7 @@ filetype plugin indent on    " required
 "" Plugins configs
 ""
 
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -156,9 +158,8 @@ end
 "" Theme
 ""
 
-se t_Co=256
 set background=dark
-silent! colors seoul256
+silent! colors gruvbox
 
 
 ""
@@ -172,7 +173,7 @@ set guioptions-=r
 if has("gui_running")
   set visualbell " Don't beep
   set background=light
-  colors seoul256
+  colors gruvbox
 
   if has("gui_macvim")
       set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
