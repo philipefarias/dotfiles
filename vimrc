@@ -73,8 +73,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'zaiste/tmux.vim'
 Plug 'sickill/vim-pasta'
 Plug 'godlygeek/tabular'
-Plug 'nelstrom/vim-qargs'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'ivalkeen/vim-simpledb'
 
 " Color schemes and some bling
@@ -104,6 +103,12 @@ let g:airline#extensions#tabline#enabled = 1
 if executable('ag')
   " Use Ag over Grep
   set grepprg=ag\ --nogroup\ --nocolor
+
+  let g:ackprg = 'ag --vimgrep --smart-case'
+  cnoreabbrev ag Ack
+  cnoreabbrev aG Ack
+  cnoreabbrev Ag Ack
+  cnoreabbrev AG Ack
 endif
 
 " use postgres syntax as default for sql
