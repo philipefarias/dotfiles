@@ -39,11 +39,6 @@ runtime! macros/matchit.vim
 " Initialize plug.vim
 call plug#begin('~/.vim/plugged')
 
-" Color schemes
-Plug 'iCyMind/NeoSolarized'
-Plug 'junegunn/seoul256.vim'
-Plug 'morhetz/gruvbox'
-
 " Ruby and Rails
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
@@ -76,15 +71,20 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'zaiste/tmux.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
 Plug 'sickill/vim-pasta'
 Plug 'godlygeek/tabular'
 Plug 'jszakmeister/vim-togglecursor'
 Plug 'nelstrom/vim-qargs'
 Plug 'rking/ag.vim'
 Plug 'ivalkeen/vim-simpledb'
+
+" Color schemes and some bling
+Plug 'iCyMind/NeoSolarized'
+Plug 'junegunn/seoul256.vim'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()
