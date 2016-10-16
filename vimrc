@@ -74,6 +74,8 @@ Plug 'zaiste/tmux.vim'
 Plug 'sickill/vim-pasta'
 Plug 'godlygeek/tabular'
 Plug 'mileszs/ack.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'ivalkeen/vim-simpledb'
 
 " Color schemes and some bling
@@ -271,3 +273,16 @@ nmap <silent> <leader>g :TestVisit<CR>
 " ALE mappings to navigate between warnings and errors
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" "
+" FZF
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" Insert mode completion
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
