@@ -40,7 +40,7 @@ runtime! macros/matchit.vim
 call plug#begin('~/.vim/plugged')
 
 " Color schemes
-Plug 'altercation/vim-colors-solarized'
+Plug 'iCyMind/NeoSolarized'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 
