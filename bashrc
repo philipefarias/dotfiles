@@ -9,6 +9,3 @@ source ~/.dotfiles/bashfiles/completions.sh
 
 # Prompt
 source ~/.dotfiles/bashfiles/prompt.sh
-
-# Git author attribution helper for pair programmers
-source ~/.dotfiles/bashfiles/hitch.sh
