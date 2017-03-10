@@ -7,7 +7,7 @@ source ~/.dotfiles/bashfiles/aliases.sh
 # Completions
 source ~/.dotfiles/bashfiles/completions.sh
 
-# Custom prompt
+# Prompt
 source ~/.dotfiles/bashfiles/prompt.sh
 
 # Git author attribution helper for pair programmers
