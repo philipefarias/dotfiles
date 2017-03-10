@@ -16,3 +16,4 @@ Thumbs.db
 .svn
 .env
 Procfile.dev
+.projections.json
