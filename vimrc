@@ -119,6 +119,7 @@ let g:sql_type_default = 'pgsql'
 " configure vim-test and neoterm
 if has("nvim")
   let g:test#strategy = 'neoterm'
+  let g:neoterm_shell = 'bash'
   let g:neoterm_run_tests_bg = 1
 endif
 
