@@ -4,7 +4,7 @@ source ~/.dotfiles/bashfiles/exports.sh
 # Aliases
 source ~/.dotfiles/bashfiles/aliases.sh
 
-# Completions for bash, git, rvm, rubygems, etc.
+# Completions
 source ~/.dotfiles/bashfiles/completions.sh
 
 # Custom prompt
