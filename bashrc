@@ -9,3 +9,5 @@ source ~/.dotfiles/bashfiles/completions.sh
 
 # Prompt
 source ~/.dotfiles/bashfiles/prompt.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
