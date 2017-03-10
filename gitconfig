@@ -9,6 +9,9 @@
   pr = !hub pull-request
   st = status
   up = !git fetch origin && git rebase origin/master
+
+  # Show branchs local merged branches, which have appropriate remote merged branches
+  both-merged = !git-both-merged
 [core]
   excludesfile = ~/.gitignore_global
   editor = nvim
