@@ -1,7 +1,3 @@
-[credential]
-  helper = osxkeychain
-[color]
-  ui = auto
 [alias]
   aa = add --all
   ap = add --patch
@@ -41,6 +37,3 @@
   template = ~/.gitmessage
 [include]
   path = .gitconfig.local
-[user]
-  name = Philipe Farias
-  email = philipefarias@gmail.com
