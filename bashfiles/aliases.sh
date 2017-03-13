@@ -12,4 +12,3 @@ alias grep="grep -n --color"
 # Dev commands
 alias git=hub # wrapper that makes git better with github
 alias pgr='pg_restore --no-acl --no-owner -h localhost -d'
-alias -- -=dash # using my custom dash script
