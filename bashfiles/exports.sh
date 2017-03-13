@@ -10,7 +10,6 @@ export TERM='xterm-256color'
 #export LSCOLORS='ExGxBxDxCxEgEdxbxgxcxd'
 # Better colors to match the solarized theme
 export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
-export GREP_OPTIONS='--color'
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups

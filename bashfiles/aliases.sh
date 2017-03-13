@@ -6,6 +6,8 @@ alias ll='ls -lG'
 alias h=history
 alias x=exit
 
+# Always enable colored `grep` output
+alias grep="grep -n --color"
 
 # Dev commands
 alias git=hub # wrapper that makes git better with github
