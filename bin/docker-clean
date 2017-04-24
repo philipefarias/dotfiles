@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+containers=$(docker ps -a -q | wc -l)
+[ $containers -gt 0 ] \
+  && docker rm $(docker ps -a -q)
+
+images=$(docker images -q --filter "dangling=true" | wc -l)
+[ $images -gt 0 ] \
+  && docker rmi $(docker images -q --filter "dangling=true")
