@@ -60,6 +60,7 @@ Plug 'juvenn/mustache.vim'
 Plug 'tpope/vim-markdown'
 Plug 'reedes/vim-pencil'
 Plug 'lifepillar/pgsql.vim'
+Plug 'posva/vim-vue'
 
 " Helpers and tooling
 Plug 'janko-m/vim-test'
