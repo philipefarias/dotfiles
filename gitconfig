@@ -43,3 +43,5 @@
   template = ~/.gitmessage
 [include]
   path = .gitconfig.local
+[credential]
+  helper = cache --timeout=14400
