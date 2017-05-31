@@ -39,28 +39,19 @@ runtime! macros/matchit.vim
 " Initialize plug.vim
 call plug#begin('~/.vim/plugged')
 
+" Languages support
+Plug 'sheerun/vim-polyglot'
+
 " Ruby and Rails
-Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-cucumber'
 Plug 'sunaku/vim-ruby-minitest'
 
 " Other languages
-Plug 'othree/html5.vim'
-Plug 'leshill/vim-json'
-Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
-Plug 'mmalecki/vim-node.js'
-Plug 'elixir-lang/vim-elixir'
 Plug 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
-Plug 'juvenn/mustache.vim'
-Plug 'tpope/vim-markdown'
 Plug 'reedes/vim-pencil'
 Plug 'lifepillar/pgsql.vim'
-Plug 'posva/vim-vue'
 
 " Helpers and tooling
 Plug 'janko-m/vim-test'
