@@ -78,6 +78,7 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
+Plug 'trevordmiller/nova-vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()
@@ -89,7 +90,7 @@ filetype plugin indent on    " required
 "" Plugins configs
 ""
 
-let g:airline_theme='gruvbox'
+let g:airline_theme='nova'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -158,8 +159,7 @@ end
 "" Theme
 ""
 
-set background=dark
-silent! colors gruvbox
+silent! colors nova
 
 
 ""
@@ -172,8 +172,7 @@ set guioptions-=r
 
 if has("gui_running")
   set visualbell " Don't beep
-  set background=light
-  colors gruvbox
+  colors nova
 
   if has("gui_macvim")
       set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
