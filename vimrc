@@ -72,9 +72,6 @@ Plug 'ivalkeen/vim-simpledb'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Color schemes and some bling
-Plug 'iCyMind/NeoSolarized'
-Plug 'junegunn/seoul256.vim'
-Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
