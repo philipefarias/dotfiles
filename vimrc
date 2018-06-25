@@ -88,8 +88,9 @@ filetype plugin indent on    " required
 ""
 
 let g:airline_theme='nova'
-let g:airline_powerline_fonts = 1
+let g:airline_symbols_ascii = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:tmuxline_powerline_separators = 0
 
 " Use The Silver Searcher for faster searches if installed
 " https://github.com/ggreer/the_silver_searcher
