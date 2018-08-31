@@ -1,8 +1,13 @@
 # Basic commands
 alias ..="cd .."
 alias ...="cd ../.."
-alias ls='ls -G'
-alias ll='ls -lG'
+if [ "$(uname)" == "Darwin" ]; then
+  alias ls='ls -G'
+  alias ll='ls -lG'
+else
+  alias ls='ls --color=auto'
+  alias ll='ls -l --color=auto'
+fi
 alias h=history
 alias x=exit
 

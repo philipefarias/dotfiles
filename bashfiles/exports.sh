@@ -8,9 +8,6 @@ export PATH="${HOME}/bin:${PATH}"
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-256color'
-#export LSCOLORS='ExGxBxDxCxEgEdxbxgxcxd'
-# Better colors to match the solarized theme
-export LSCOLORS='gxfxbEaEBxxEhEhBaDaCaD'
 
 # Erase duplicates in history
 export HISTCONTROL=erasedups
