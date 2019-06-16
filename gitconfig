@@ -15,6 +15,9 @@
 
   # Show branchs local merged branches, which have appropriate remote merged branches
   both-merged = !git-both-merged
+
+  # Normal diff to save as a patch for emailing or later application
+  patch = !git --no-pager diff --no-color
 [core]
   excludesfile = ~/.gitignore_global
   editor = nvim
