@@ -68,7 +68,6 @@ Plug 'godlygeek/tabular'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'ivalkeen/vim-simpledb'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Color schemes and some bling
