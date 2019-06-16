@@ -206,8 +206,8 @@ set wildignore+=*.swp,*~,._*
 "" Backup and swap files
 ""
 
-set backupdir=~/.vim/.backup//    " where to put backup files.
-set directory=~/.vim/.tmp//      " where to put swap files.
+set backupdir=~/.vim/backup//   " where to put backup files.
+set directory=~/.vim/swap//      " where to put swap files.
 
 
 ""

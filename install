@@ -26,8 +26,8 @@ if git --version &>/dev/null; then
     vim_dir="${HOME}/.vim"
     plug_dir="$vim_dir/autoload/plug.vim"
 
-    mkdir -p "$vim_dir/.backup" && echo "Vim backup directory created"
-    mkdir -p "$vim_dir/.tmp" && echo "Vim tmp directory created"
+    mkdir -p "$vim_dir/backup" && echo "Vim backup directory created"
+    mkdir -p "$vim_dir/swap" && echo "Vim swap directory created"
 
     if [ ! -d "$plug_dir" ]; then
       echo "Getting Plug"
