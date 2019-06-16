@@ -31,5 +31,3 @@
 [include]
   path = .gitconfig.local
   path = .gittheme
-[credential]
-  helper = osxkeychain
