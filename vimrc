@@ -49,7 +49,6 @@ Plug 'tpope/vim-rails'
 Plug 'sunaku/vim-ruby-minitest'
 
 " Other languages
-Plug 'bitc/vim-hdevtools'       " for haskell; must install hdevtools
 Plug 'reedes/vim-pencil'
 Plug 'lifepillar/pgsql.vim'
 
