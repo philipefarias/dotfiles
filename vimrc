@@ -50,7 +50,6 @@ Plug 'sunaku/vim-ruby-minitest'
 
 " Other languages
 Plug 'reedes/vim-pencil'
-Plug 'lifepillar/pgsql.vim'
 
 " Helpers and tooling
 Plug 'janko-m/vim-test'
