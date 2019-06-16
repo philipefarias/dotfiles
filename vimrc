@@ -75,7 +75,7 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
-Plug 'trevordmiller/nova-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " All of your Plugins must be added before the following line
 call plug#end()
@@ -87,7 +87,7 @@ filetype plugin indent on    " required
 "" Plugins configs
 ""
 
-let g:airline_theme='nova'
+let g:airline_theme='dracula'
 let g:airline_symbols_ascii = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:tmuxline_powerline_separators = 0
@@ -157,7 +157,7 @@ end
 "" Theme
 ""
 
-silent! colors nova
+silent! colors dracula
 
 
 ""
@@ -170,7 +170,7 @@ set guioptions-=r
 
 if has("gui_running")
   set visualbell " Don't beep
-  colors nova
+  colors dracula
 
   if has("gui_macvim")
       set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
