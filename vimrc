@@ -217,17 +217,12 @@ if has("autocmd")
     autocmd VimResized * wincmd =
   endif
 
-  " Set the Ruby filetype for a number of common Ruby files without .rb
-  au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,Procfile,config.ru,*.rake} set ft=ruby
-  " Treat JSON files like JavaScript
-  au BufNewFile,BufRead *.json set ft=javascript
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal! g`\"" | endif
 
   " Turn on language specific omnifuncs
-  autocmd FileType ruby set omnifunc=rubycomplete#Complete
   autocmd FileType python set omnifunc=pythoncomplete#Complete
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType php set omnifunc=phpcomplete#CompletePHP
