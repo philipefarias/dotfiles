@@ -1,6 +1,10 @@
 ###
 # Env variables
 
+# Fix macOS locale
+export LC_ALL='en_US.UTF-8'
+export LANG='en_US.UTF-8'
+
 # Add paths that should have been there by default
 export PATH="/usr/local/sbin:${PATH}"
 export PATH="/usr/local/bin:${PATH}"
