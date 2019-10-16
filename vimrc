@@ -29,12 +29,8 @@ if !has('nvim')
 end
 
 ""
-"" Macros and Plugins
+"" Plugins and Macros
 ""
-
-filetype off
-" % to bounce from do to end etc.
-runtime! macros/matchit.vim
 
 " Initialize plug.vim
 call plug#begin('~/.vim/plugged')
@@ -77,7 +73,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 " All of your Plugins must be added before the following line
 call plug#end()
 
-filetype plugin indent on    " required
+" % to bounce from do to end etc.
+runtime macros/matchit.vim
 
 
 ""
