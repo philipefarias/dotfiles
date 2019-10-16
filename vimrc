@@ -155,28 +155,6 @@ silent! colors dracula
 
 
 ""
-"" Gui options
-""
-
-set guifont=Monofur\ for\ Powerline:h18 " If you're not in a terminal look first for gvimrc
-set guioptions-=T
-set guioptions-=r
-
-if has("gui_running")
-  set visualbell " Don't beep
-  colors dracula
-
-  if has("gui_macvim")
-      set fuoptions=maxhorz,maxvert " Fullscreen takes up entire screen
-  endif
-
-  if exists("g:enable_mvim_shift_arrow")
-    let macvim_hig_shift_movement = 1 " mvim shift-arrow-keys
-  endif
-endif
-
-
-""
 "" Wild settings
 ""
 
