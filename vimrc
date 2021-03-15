@@ -152,6 +152,7 @@ end
 ""
 
 silent! colors dracula
+highlight Normal ctermfg=NONE ctermbg=NONE
 
 
 ""
