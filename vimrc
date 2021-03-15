@@ -151,8 +151,12 @@ end
 "" Theme
 ""
 
+if exists('$TMUX')
+  let g:dracula_italic=0
+  let g:dracula_colorterm = 0
+endif
+
 silent! colors dracula
-highlight Normal ctermfg=NONE ctermbg=NONE
 
 
 ""
