@@ -50,7 +50,7 @@ Plug 'reedes/vim-pencil'
 " Helpers and tooling
 Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-vinegar'
