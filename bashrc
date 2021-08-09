@@ -92,7 +92,7 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 if [ -d "${HOME}/.asdf" ]; then
-  . "$(brew --prefix asdf)/asdf.sh"
+  . "$(brew --prefix asdf)/libexec/asdf.sh"
   . "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
 fi
 
