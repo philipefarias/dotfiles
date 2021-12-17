@@ -56,6 +56,17 @@ fi
 
 
 ###
+# Util functions
+
+# .env loading in the shell
+source_env () {
+  set -a
+  [ -f .env ] && . .env
+  set +a
+}
+
+
+###
 # Completions
 
 # Must have Homebrew installed and 'bash_completion' with it
