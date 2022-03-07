@@ -6,6 +6,10 @@ export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 
 # Add paths that should have been there by default
+if [ "$(uname -sm)" == "Darwin arm64" ]; then # for Apple Silicon
+  export PATH="/opt/homebrew/sbin:${PATH}"
+  export PATH="/opt/homebrew/bin:${PATH}"
+fi
 export PATH="/usr/local/sbin:${PATH}"
 export PATH="/usr/local/bin:${PATH}"
 export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
