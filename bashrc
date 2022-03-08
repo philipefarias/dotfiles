@@ -9,10 +9,12 @@ export LANG='en_US.UTF-8'
 if [ "$(uname -sm)" == "Darwin arm64" ]; then # for Apple Silicon
   export PATH="/opt/homebrew/sbin:${PATH}"
   export PATH="/opt/homebrew/bin:${PATH}"
+  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+else
+  export PATH="/usr/local/opt/libpq/bin:$PATH"
 fi
 export PATH="/usr/local/sbin:${PATH}"
 export PATH="/usr/local/bin:${PATH}"
-export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/.bin:${PATH}"
 export PATH="${HOME}/bin:${PATH}"
