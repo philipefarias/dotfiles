@@ -62,6 +62,7 @@ Plug 'godlygeek/tabular'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Color schemes and some bling
 Plug 'vim-airline/vim-airline'
