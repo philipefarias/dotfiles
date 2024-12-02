@@ -29,6 +29,9 @@ export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
 shopt -s histappend
 
+# Enable globstar (**) to recurse all directory levels
+shopt -s globstar
+
 
 ###
 # Aliases
