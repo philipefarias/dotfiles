@@ -86,17 +86,17 @@ let g:airline_symbols_ascii = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:tmuxline_powerline_separators = 0
 
-" Use The Silver Searcher for faster searches if installed
-" https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
+" Use ripgrep for faster searches if installed
+" https://github.com/BurntSushi/ripgrep
+if executable('rg')
+  " Use ripgrep over Grep
+  set grepprg=rg\ --vimgrep\ --smart-case\ --hidden\ --follow
 
-  let g:ackprg = 'ag --vimgrep --smart-case'
-  cnoreabbrev ag Ack
-  cnoreabbrev aG Ack
-  cnoreabbrev Ag Ack
-  cnoreabbrev AG Ack
+  let g:ackprg = 'rg --vimgrep --smart-case --hidden --follow'
+  cnoreabbrev rg Ack
+  cnoreabbrev rG Ack
+  cnoreabbrev Rg Ack
+  cnoreabbrev RG Ack
 endif
 
 " use postgres syntax as default for sql
