@@ -38,6 +38,7 @@ Personal dotfiles for Vim/Neovim + Tmux development environment with Git version
 - Adding plugins: Insert in appropriate group in `vimrc`, run `:PlugInstall`
 - LSP servers: Add to Mason `ensure_installed`, configure with `lspconfig.setup()`
 - Git aliases: Add to `gitconfig` under `[alias]` section
+- Git interactive rebase: Use `GIT_SEQUENCE_EDITOR` with `sed` for automated rebase operations
 - Tmux bindings: Add to `tmux.conf`, prefix existing bindings with comments
 - Bash utilities: Create in `bin/` with executable permissions, use bash-specific syntax
 
