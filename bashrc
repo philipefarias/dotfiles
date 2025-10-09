@@ -71,6 +71,10 @@ if command -v bat &>/dev/null; then
   alias batcat='bat'
 fi
 
+if command -v fd &>/dev/null; then
+  alias find='fd'
+fi
+
 # Always enable colored `grep` output
 alias grep="grep -n --color"
 
@@ -134,6 +138,12 @@ if shopt -q globstar; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Use fd with fzf if available
+if command -v fd &>/dev/null; then
+  export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
 
 if [ -d "${HOME}/.asdf" ]; then
   export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
