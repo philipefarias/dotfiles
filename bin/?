@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+#
+# Quick reference for keybindings
+#
+# Shows organized keybindings for Bash, Tmux, and Vim/Neovim
+
+set -euo pipefail
+
+# Colors
+readonly CYAN='\033[0;36m'
+readonly GREEN='\033[0;32m'
+readonly YELLOW='\033[1;33m'
+readonly BLUE='\033[0;34m'
+readonly RESET='\033[0m'
+
+# Formatting templates
+readonly FMT_2COL="  ${GREEN}%-14s${RESET} %-30s ${GREEN}%-14s${RESET} %s\n"
+readonly FMT_1COL="  ${GREEN}%-14s${RESET} %s\n"
+
+# Print section separator
+separator() {
+  local title="$1"
+  local total_width=80
+  local title_with_spaces=" $title "
+  local title_len=${#title_with_spaces}
+  local dash_total=$((total_width - title_len))
+  local dash_left=$((dash_total / 2))
+  local dash_right=$((dash_total - dash_left))
+  local sep_left sep_right
+  sep_left=$(printf "─%.0s" $(seq 1 "$dash_left"))
+  sep_right=$(printf "─%.0s" $(seq 1 "$dash_right"))
+  printf "\n${CYAN}%s%s%s${RESET}\n" "$sep_left" "$title_with_spaces" "$sep_right"
+}
+
+# Print subsection header (first=true skips leading newline)
+subsection() {
+  local title="$1"
+  local first="${2:-false}"
+  if [[ "$first" == "true" ]]; then
+    printf "${CYAN}▸ %s${RESET}\n" "$title"
+  else
+    printf "\n${CYAN}▸ %s${RESET}\n" "$title"
+  fi
+}
+
+# Print keybinding in two columns
+kb2() {
+  printf "$FMT_2COL" "$1" "$2" "$3" "$4"
+}
+
+# Print keybinding in one column
+kb1() {
+  printf "$FMT_1COL" "$1" "$2"
+}
+
+# Main output
+main() {
+  clear
+  printf "\n${CYAN}═══════════════════════════════════ KEYBINDINGS ════════════════════════════════════${RESET}\n"
+  
+  # BASH Section
+  separator "BASH"
+  subsection "SHELL" true
+  kb2 ".." "Up one directory" "..." "Up two directories"
+  kb2 "h" "Command history" "x" "Exit shell"
+  
+  subsection "CLI TOOLS"
+  kb2 "cat" "Syntax highlighting (bat)" "ls / ll" "List files (eza)"
+  kb2 "lt" "Tree view (eza)" "find" "Fast search (fd)"
+  kb2 "z <dir>" "Smart cd (zoxide)" "http" "HTTP client (httpie)"
+  
+  subsection "DATA"
+  kb2 "jq" "Process JSON" "yq" "Process YAML"
+  kb2 "tldr" "Quick examples" "btop" "System monitor"
+  
+  subsection "FZF"
+  kb2 "Ctrl-r" "Search history" "Ctrl-t" "Find files"
+  kb1 "Alt-c" "Fuzzy cd"
+  
+  # GIT Section
+  separator "GIT"
+  subsection "SHORTCUTS" true
+  kb2 "git aa" "Add all" "git ap" "Add patch"
+  kb2 "git ci" "Commit" "git ca" "Commit amend"
+  kb2 "git co" "Checkout" "git st" "Status"
+  kb2 "git l" "Pretty log" "git lg" "Log with graph"
+  kb1 "git d" "Show diff"
+  
+  # TMUX Section
+  separator "TMUX"
+  subsection "WINDOW & PANE MANAGEMENT" true
+  kb2 "Ctrl-a" "Prefix" "Ctrl-a c" "New window"
+  kb2 "Ctrl-a |" "Split vertical" "Ctrl-a -" "Split horizontal"
+  kb2 "Ctrl-a n/p" "Next/prev window" "Ctrl-a hjkl" "Navigate panes"
+  
+  subsection "TMUX ACTIONS"
+  kb2 "Ctrl-a r" "Reload config" "Ctrl-a [" "Copy mode"
+  
+  # VIM Section
+  separator "VIM/NEOVIM"
+  subsection "LSP NAVIGATION" true
+  kb2 "gd" "Go to definition" "gr" "Find references"
+  kb2 "K" "Hover docs" "<leader>rn" "Rename"
+  kb2 "<leader>ca" "Code actions" "<leader>d" "Diagnostics"
+  kb1 "[d / ]d" "Prev/next error"
+  
+  subsection "RAILS NAVIGATION"
+  kb2 "<leader>rc" "Controller" "<leader>rm" "Model"
+  kb2 "<leader>rv" "View" "<leader>rs" "Spec"
+  kb2 "<leader>rf" "Factory" "<leader>rt" "Run test"
+  kb2 "<leader>ra" "Run all" "<leader>rl" "Run last"
+  
+  printf "\n${YELLOW}TIP:${RESET} Type ${BLUE}?${RESET} anytime for this reference\n"
+}
+
+main "$@"
