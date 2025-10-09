@@ -75,6 +75,11 @@ if command -v fd &>/dev/null; then
   alias find='fd'
 fi
 
+if command -v httpie &>/dev/null; then
+  alias http='http --pretty=all --print=hb'
+  alias https='https --pretty=all --print=hb'
+fi
+
 # Always enable colored `grep` output
 alias grep="grep -n --color"
 

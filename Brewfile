@@ -37,6 +37,9 @@ brew "yq"               # YAML processor
 brew "btop"             # Beautiful process viewer
 brew "tldr"             # Simplified man pages
 
+# HTTP clients
+brew "httpie"           # User-friendly curl alternative
+
 # Development tools
 brew "asdf"             # Version manager for languages
 
