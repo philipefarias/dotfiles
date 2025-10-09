@@ -21,6 +21,7 @@ Personal dotfiles for Vim/Neovim + Tmux development environment with Git version
 - **VCS**: Git only
 
 ## Code Style Guidelines
+- **Documentation**: Keep all documentation, comments, and explanations concise - no fluff, only essential information
 - **Vimscript**: Use double quotes for comments, maintain existing indentation (2 spaces)
 - **Lua blocks**: Indent with 2 spaces, use descriptive variable names
 - **Bash scripts**: Follow existing bin/ script patterns, use `#!/usr/bin/env bash` shebang, include comments
