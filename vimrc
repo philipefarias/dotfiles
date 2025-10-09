@@ -202,6 +202,9 @@ if has("autocmd")
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal! g`\"" | endif
 
+  " Set *.template.yaml as AWS CloudFormation files
+  au BufRead,BufNewFile template.yaml set filetype=yaml.cloudformation
+
   " Turn on language specific omnifuncs
   autocmd FileType python set omnifunc=pythoncomplete#Complete
   autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
