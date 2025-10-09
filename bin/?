@@ -108,10 +108,7 @@ main() {
   # VIM Section
   separator "VIM/NEOVIM"
   subsection "HELP" true
-  kb1 ":map" "Show all keybindings"
-  kb1 ":map <leader>" "Show leader keybindings"
-  kb1 ":help <topic>" "Search help documentation"
-  kb1 ":verbose map <key>" "Show where key was mapped"
+  kb1 "<leader>" "Show available keybindings (which-key)"
   
   printf "\n${YELLOW}TIP:${RESET} Type ${BLUE}?${RESET} anytime for this reference\n"
 }
