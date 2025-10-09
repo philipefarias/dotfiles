@@ -32,3 +32,5 @@
 [include]
   path = .gitconfig.local
   path = .gittheme
+[init]
+	defaultBranch = main
