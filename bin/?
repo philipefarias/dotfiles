@@ -92,23 +92,26 @@ main() {
   kb2 "Ctrl-a" "Prefix" "Ctrl-a c" "New window"
   kb2 "Ctrl-a |" "Split vertical" "Ctrl-a -" "Split horizontal"
   kb2 "Ctrl-a n/p" "Next/prev window" "Ctrl-a hjkl" "Navigate panes"
+  kb1 "Ctrl-a x" "Kill pane"
   
-  subsection "TMUX ACTIONS"
-  kb2 "Ctrl-a r" "Reload config" "Ctrl-a [" "Copy mode"
+  subsection "COPY MODE (VI STYLE)"
+  kb2 "Ctrl-a [" "Enter copy mode" "v" "Begin selection"
+  kb2 "V" "Select line" "y" "Copy (yank)"
+  kb2 "Ctrl-p" "Paste buffer" "r" "Rectangle toggle"
+  
+  subsection "SESSIONS (TMUX-RESURRECT)"
+  kb2 "Ctrl-a Ctrl-s" "Save session" "Ctrl-a Ctrl-r" "Restore session"
+  
+  subsection "SYSTEM"
+  kb1 "Ctrl-a r" "Reload config"
   
   # VIM Section
   separator "VIM/NEOVIM"
-  subsection "LSP NAVIGATION" true
-  kb2 "gd" "Go to definition" "gr" "Find references"
-  kb2 "K" "Hover docs" "<leader>rn" "Rename"
-  kb2 "<leader>ca" "Code actions" "<leader>d" "Diagnostics"
-  kb1 "[d / ]d" "Prev/next error"
-  
-  subsection "RAILS NAVIGATION"
-  kb2 "<leader>rc" "Controller" "<leader>rm" "Model"
-  kb2 "<leader>rv" "View" "<leader>rs" "Spec"
-  kb2 "<leader>rf" "Factory" "<leader>rt" "Run test"
-  kb2 "<leader>ra" "Run all" "<leader>rl" "Run last"
+  subsection "HELP" true
+  kb1 ":map" "Show all keybindings"
+  kb1 ":map <leader>" "Show leader keybindings"
+  kb1 ":help <topic>" "Search help documentation"
+  kb1 ":verbose map <key>" "Show where key was mapped"
   
   printf "\n${YELLOW}TIP:${RESET} Type ${BLUE}?${RESET} anytime for this reference\n"
 }
