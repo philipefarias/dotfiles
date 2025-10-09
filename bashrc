@@ -8,6 +8,9 @@ export LANG='en_US.UTF-8'
 # gpg-agent need this
 export GPG_TTY=$(tty)
 
+# Set NeoVim as the default terminal editor
+export EDITOR=nvim
+
 # Add paths that should have been there by default
 if [ "$(uname -sm)" == "Darwin arm64" ]; then # for Apple Silicon
   export PATH="/opt/homebrew/sbin:${PATH}"
