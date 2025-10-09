@@ -7,8 +7,11 @@ Personal dotfiles for Vim/Neovim + Tmux development environment with Git version
 - `vimrc` - Neovim/Vim configuration with LSP, completion, and language support
 - `tmux.conf` - Tmux terminal multiplexer settings
 - `bashrc`, `bash_profile` - Shell configuration
-- `gitconfig`, `gitignore_global`, `gitmessage` - Git settings
+- `gitconfig` - Git settings (personal info in `~/.gitconfig.local`, not tracked)
+- `gitignore_global`, `gitmessage` - Git ignore patterns and commit template
 - `bin/` - Custom shell scripts and utilities
+
+**Note**: Personal Git configuration (user name, email, signing key, credentials) is stored in `~/.gitconfig.local` which is included but not tracked in this repository.
 
 ## Development Stack
 - **Editor**: Neovim with vim-plug plugin manager and Lua configuration
