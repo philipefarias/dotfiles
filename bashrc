@@ -47,6 +47,7 @@ alias ...="cd ../.."
 if [ "$(uname)" == "Darwin" ]; then
   alias ls='ls -G'
   alias ll='ls -lG'
+  alias pinentry='pinentry-mac'
 else
   alias ls='ls --color=auto'
   alias ll='ls -l --color=auto'
