@@ -31,9 +31,12 @@ brew bundle install  # Install dependencies (macOS)
 
 **Brewfile** installs:
 
-- Shell tools: bash, bash-completion, bash-git-prompt, tmux
+- Shell: bash, bash-completion, bash-git-prompt, tmux
 - Editors: neovim, vim
-- Development: git, ripgrep, fzf, asdf
+- Modern CLI tools: bat (cat), eza (ls), fd (find), zoxide (smart cd), ripgrep, fzf
+- Data tools: jq (JSON), yq (YAML)
+- Utilities: btop (process viewer), tldr (man pages), httpie (HTTP client)
+- Development: git, git-delta, asdf
 - Security: gnupg, pinentry-mac
 - Fonts: Fira Code, Hack Nerd Font
 
@@ -73,6 +76,23 @@ Create `~/.gitconfig.local` for personal Git settings:
 - `Ctrl-a |` - Split vertically
 - `Ctrl-a -` - Split horizontally
 - `Ctrl-a r` - Reload config
+
+## Modern CLI Tools
+
+These tools are aliased to replace standard commands:
+
+- `cat` → **bat** - Syntax highlighting, git integration, line numbers
+- `ls` → **eza** - Better colors, git status, icons
+- `find` → **fd** - Simpler syntax, respects .gitignore
+- `cd` → **z** (zoxide) - Jump to frequent directories (e.g., `z dotfiles`)
+- `curl` → **httpie** - Human-friendly HTTP client with `http` command
+
+Additional utilities:
+
+- **jq/yq** - Process JSON/YAML (`cat file.json | jq '.key'`)
+- **tldr** - Quick command examples (`tldr tar`)
+- **btop** - Beautiful system monitor
+- **fzf+fd** - Fuzzy file search with smart defaults
 
 ## Structure
 
