@@ -46,6 +46,8 @@ Personal dotfiles for Vim/Neovim + Tmux development environment with Git version
 ## Commit Message Pattern
 **CRITICAL: Commits must be atomic** - each commit should contain one logical change that can stand alone.
 
+**CRITICAL: All commits must be GPG signed** - ensure `commit.gpgsign = true` is set and your GPG key is valid.
+
 Use imperative mood with action verbs. Common patterns:
 - `Add <component>` - New features, plugins, configs, scripts
 - `Remove <component>` - Delete unused/redundant features
