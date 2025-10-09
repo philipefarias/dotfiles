@@ -29,6 +29,10 @@ brew "eza"              # Modern ls replacement
 brew "fd"               # Fast find replacement
 brew "zoxide"           # Smart cd with frecency
 
+# Data processing
+brew "jq"               # JSON processor
+brew "yq"               # YAML processor
+
 # Development tools
 brew "asdf"             # Version manager for languages
 
