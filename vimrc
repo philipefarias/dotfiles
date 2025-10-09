@@ -35,7 +35,7 @@ end
 " Initialize plug.vim
 call plug#begin('~/.vim/plugged')
 
-" Languages support
+" Language support - general
 Plug 'sheerun/vim-polyglot'
 
 " Ruby and Rails
@@ -44,7 +44,7 @@ Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
 Plug 'sunaku/vim-ruby-minitest'
 
-" Other languages
+" Markdown and writing
 Plug 'reedes/vim-pencil'
 
 " Helpers and tooling
