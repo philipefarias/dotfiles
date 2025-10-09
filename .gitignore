@@ -1,0 +1,48 @@
+# Encrypted personal files
+*.gpg
+
+# Secrets and credentials
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.env.local
+*.env.production
+
+# Work-specific configurations
+*_work
+*-work
+company-*
+
+# Local overrides
+*.local
+*_override
+*-override
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+.netrwhist
+tags
+
+# Temporary files
+tmp/
+temp/
+*.tmp
