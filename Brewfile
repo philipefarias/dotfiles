@@ -24,6 +24,7 @@ brew "vim"
 # Search and file tools
 brew "ripgrep"
 brew "fzf"
+brew "bat"              # Cat with syntax highlighting
 
 # Development tools
 brew "asdf"             # Version manager for languages

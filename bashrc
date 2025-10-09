@@ -27,6 +27,10 @@ export PATH="${HOME}/bin:${PATH}"
 # Unbreak broken, non-colored terminal
 export TERM='xterm-256color'
 
+# Bat (better cat) configuration
+export BAT_THEME="Dracula"
+export BAT_STYLE="numbers,changes,header"
+
 # Erase duplicates in history
 export HISTCONTROL=erasedups
 # Store 10k history entries
@@ -54,6 +58,12 @@ else
 fi
 alias h=history
 alias x=exit
+
+# Modern replacements
+if command -v bat &>/dev/null; then
+  alias cat='bat --style=auto'
+  alias batcat='bat'
+fi
 
 # Always enable colored `grep` output
 alias grep="grep -n --color"
