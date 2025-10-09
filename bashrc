@@ -48,18 +48,24 @@ shopt -s globstar
 # Basic commands
 alias ..="cd .."
 alias ...="cd ../.."
-if [ "$(uname)" == "Darwin" ]; then
-  alias ls='ls -G'
-  alias ll='ls -lG'
-  alias pinentry='pinentry-mac'
-else
-  alias ls='ls --color=auto'
-  alias ll='ls -l --color=auto'
-fi
 alias h=history
 alias x=exit
 
-# Modern replacements
+# Modern replacements (use new tools if available, fallback to standard)
+if command -v eza &>/dev/null; then
+  alias ls='eza --color=always --group-directories-first'
+  alias ll='eza -la --color=always --group-directories-first --git'
+  alias lt='eza --tree --level=2 --color=always'
+else
+  if [ "$(uname)" == "Darwin" ]; then
+    alias ls='ls -G'
+    alias ll='ls -lG'
+  else
+    alias ls='ls --color=auto'
+    alias ll='ls -l --color=auto'
+  fi
+fi
+
 if command -v bat &>/dev/null; then
   alias cat='bat --style=auto'
   alias batcat='bat'
@@ -68,14 +74,16 @@ fi
 # Always enable colored `grep` output
 alias grep="grep -n --color"
 
-# Dev commands
+# Development commands
 if hub --version &>/dev/null; then
-  alias git=hub # wrapper that makes git better with github
+  alias git=hub
 fi
 alias pgr='pg_restore --no-acl --no-owner -h localhost -d'
 
-# For those whose miss the macOS "open"
-if [ ! "$(uname)" == "Darwin" ]; then
+# Platform-specific
+if [ "$(uname)" == "Darwin" ]; then
+  alias pinentry='pinentry-mac'
+else
   alias open='xdg-open &>/dev/null'
 fi
 

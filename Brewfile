@@ -25,6 +25,7 @@ brew "vim"
 brew "ripgrep"
 brew "fzf"
 brew "bat"              # Cat with syntax highlighting
+brew "eza"              # Modern ls replacement
 
 # Development tools
 brew "asdf"             # Version manager for languages
