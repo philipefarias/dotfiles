@@ -2,10 +2,6 @@
 # Install with: brew bundle install
 # Check status: brew bundle check
 
-# Taps
-tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-
 # Shell and terminal
 brew "bash"
 brew "bash-completion@2"
@@ -19,7 +15,6 @@ brew "diff-so-fancy"
 
 # Editor
 brew "neovim"
-brew "vim"
 
 # Search and file tools
 brew "ripgrep"
