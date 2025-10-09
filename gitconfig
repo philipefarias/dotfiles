@@ -29,11 +29,8 @@
 [commit]
   template = ~/.gitmessage
 	gpgsign = true
+[init]
+	defaultBranch = main
 [include]
   path = .gitconfig.local
   path = .gittheme
-[credential]
-	helper = 
-	helper = /usr/local/share/gcm-core/git-credential-manager
-[init]
-	defaultBranch = main
