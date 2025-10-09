@@ -52,7 +52,17 @@ Personal dotfiles for Vim/Neovim + Tmux development environment with Git version
 
 **CRITICAL: All commits must be GPG signed** - ensure `commit.gpgsign = true` is set and your GPG key is valid.
 
-Use imperative mood with action verbs. Common patterns:
+Use imperative mood with action verbs. Keep subject line under 50 characters. Add a short description (1-2 lines) when the change benefits from additional context.
+
+**Format:**
+```
+Subject line (imperative, <50 chars)
+
+Optional short description providing context or rationale.
+Use when the "why" isn't obvious from the subject alone.
+```
+
+**Common patterns:**
 - `Add <component>` - New features, plugins, configs, scripts
 - `Remove <component>` - Delete unused/redundant features
 - `Replace <old> for <new>` - Swap implementations
@@ -62,13 +72,35 @@ Use imperative mood with action verbs. Common patterns:
 - `Set <setting>` - Configuration changes
 - `Use <tool/approach>` - Switch to different tool/method
 - `Organize <area>` - Restructure without functionality change
+- `Refactor <component>` - Improve code structure without changing behavior
 
-Examples:
-- `Add vim plugin nvim-treesitter/nvim-treesitter`
-- `Remove redundant tmux configuration`
-- `Replace null-ls.nvim for none-ls.nvim`
-- `Fix dracula colors inside tmux`
-- `Set bash globstar option`
+**Examples:**
+```
+Add vim plugin nvim-treesitter/nvim-treesitter
+
+Remove redundant tmux configuration
+
+Replace null-ls.nvim for none-ls.nvim
+
+null-ls.nvim is archived and incompatible with Neovim 0.11.
+none-ls.nvim is a maintained fork with the same API.
+
+Fix dracula colors inside tmux
+
+Set bash globstar option
+
+Refactor ? script following bash best practices
+
+Applies DRY principle with reusable functions and constants.
+Uses set -euo pipefail for better error handling.
+```
+
+**When to add description:**
+- Explaining rationale for architectural decisions
+- Documenting compatibility issues or breaking changes
+- Providing context for non-obvious fixes
+- Clarifying scope of refactoring changes
+- Not needed for self-explanatory changes (most commits)
 
 ## What NOT to Commit
 - Secrets: API keys, tokens, passwords, private SSH/GPG keys, certificates
