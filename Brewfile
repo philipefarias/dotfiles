@@ -33,6 +33,10 @@ brew "zoxide"           # Smart cd with frecency
 brew "jq"               # JSON processor
 brew "yq"               # YAML processor
 
+# System utilities
+brew "btop"             # Beautiful process viewer
+brew "tldr"             # Simplified man pages
+
 # Development tools
 brew "asdf"             # Version manager for languages
 
