@@ -15,7 +15,6 @@ export EDITOR=nvim
 if [ "$(uname -sm)" == "Darwin arm64" ]; then # for Apple Silicon
   export PATH="/opt/homebrew/sbin:${PATH}"
   export PATH="/opt/homebrew/bin:${PATH}"
-  export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 else
   export PATH="/usr/local/opt/libpq/bin:$PATH"
 fi
