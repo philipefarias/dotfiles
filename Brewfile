@@ -27,6 +27,7 @@ brew "fzf"
 brew "bat"              # Cat with syntax highlighting
 brew "eza"              # Modern ls replacement
 brew "fd"               # Fast find replacement
+brew "zoxide"           # Smart cd with frecency
 
 # Development tools
 brew "asdf"             # Version manager for languages

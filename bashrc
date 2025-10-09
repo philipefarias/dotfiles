@@ -150,6 +150,11 @@ if [ -d "${HOME}/.asdf" ]; then
   . <(asdf completion bash)
 fi
 
+# Initialize zoxide (smart cd)
+if command -v zoxide &>/dev/null; then
+  eval "$(zoxide init bash)"
+fi
+
 # Okta AWS CLI
 if [[ -f "$HOME/.okta/bash_functions" ]]; then
   . "$HOME/.okta/bash_functions"
