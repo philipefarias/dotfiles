@@ -62,6 +62,7 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects' " Additional textobjects
 " Code editing helpers
 Plug 'windwp/nvim-autopairs'                      " Auto close brackets
 Plug 'numToStr/Comment.nvim'                      " Better commenting
+Plug 'folke/which-key.nvim'                       " Show keybindings popup
 
 " Ruby and Rails
 Plug 'tpope/vim-bundler'
@@ -479,6 +480,24 @@ cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 -- Comment.nvim
 require('Comment').setup()
+
+-- which-key.nvim
+require('which-key').setup({
+  preset = 'modern',
+  delay = 500,
+  plugins = {
+    marks = true,
+    registers = true,
+    spelling = {
+      enabled = true,
+      suggestions = 20,
+    },
+  },
+  win = {
+    border = 'rounded',
+    padding = { 1, 2 },
+  },
+})
 
 -- Diagnostic settings
 vim.diagnostic.config({
