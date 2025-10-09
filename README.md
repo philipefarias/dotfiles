@@ -18,18 +18,31 @@ Personal development environment configuration for Vim/Neovim, Tmux, and Bash on
 
 ## Installation
 
+### Quick Start
+
 ```bash
 git clone https://github.com/philipefarias/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-./install
+brew bundle install  # Install dependencies (macOS)
+./install            # Link dotfiles and setup plugins
 ```
 
-The install script will:
+### What Gets Installed
 
-- Create symlinks for all config files
-- Set up Vim/Neovim with vim-plug
-- Configure Tmux with TPM (Tmux Plugin Manager)
-- Create necessary directories
+**Brewfile** installs:
+
+- Shell tools: bash, bash-completion, bash-git-prompt, tmux
+- Editors: neovim, vim
+- Development: git, ripgrep, fzf, asdf
+- Security: gnupg, pinentry-mac
+- Fonts: Fira Code, Hack Nerd Font
+
+**install script**:
+
+- Creates symlinks for all config files
+- Sets up Vim/Neovim with vim-plug
+- Configures Tmux with TPM (Tmux Plugin Manager)
+- Creates necessary directories
 
 ## Personal Configuration
 
@@ -65,6 +78,7 @@ Create `~/.gitconfig.local` for personal Git settings:
 
 ```text
 .
+├── Brewfile              # Homebrew dependencies
 ├── vimrc                 # Vim/Neovim configuration
 ├── tmux.conf             # Tmux configuration
 ├── bashrc                # Bash shell configuration
