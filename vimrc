@@ -38,6 +38,31 @@ call plug#begin('~/.vim/plugged')
 " Language support - general
 Plug 'sheerun/vim-polyglot'
 
+" LSP and language server support
+Plug 'neovim/nvim-lspconfig'                      " LSP configuration
+Plug 'williamboman/mason.nvim'                    " LSP server installer
+Plug 'williamboman/mason-lspconfig.nvim'          " Bridge mason and lspconfig
+
+" Autocompletion
+Plug 'hrsh7th/nvim-cmp'                           " Completion engine
+Plug 'hrsh7th/cmp-nvim-lsp'                       " LSP source for nvim-cmp
+Plug 'hrsh7th/cmp-buffer'                         " Buffer completions
+Plug 'hrsh7th/cmp-path'                           " Path completions
+Plug 'L3MON4D3/LuaSnip'                           " Snippet engine
+Plug 'saadparwaiz1/cmp_luasnip'                   " Snippet completions
+
+" Formatting and linting
+Plug 'nvimtools/none-ls.nvim'                     " Formatter/linter integration
+Plug 'nvim-lua/plenary.nvim'                      " Required by none-ls
+
+" Syntax highlighting and code intelligence
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Advanced syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter-textobjects' " Additional textobjects
+
+" Code editing helpers
+Plug 'windwp/nvim-autopairs'                      " Auto close brackets
+Plug 'numToStr/Comment.nvim'                      " Better commenting
+
 " Ruby and Rails
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rake'
