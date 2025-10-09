@@ -28,6 +28,7 @@
   default = simple
 [commit]
   template = ~/.gitmessage
+	gpgsign = true
 [include]
   path = .gitconfig.local
   path = .gittheme
