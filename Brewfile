@@ -24,7 +24,6 @@ brew "vim"
 # Search and file tools
 brew "ripgrep"
 brew "fzf"
-brew "the_silver_searcher"  # ag - for compatibility
 
 # Development tools
 brew "asdf"             # Version manager for languages
