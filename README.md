@@ -12,8 +12,8 @@ Personal development environment configuration for Vim/Neovim, Tmux, and Bash on
 ## Requirements
 
 - macOS (Apple Silicon/Intel) or modern Linux
-- Bash 4+
-- Git 2.0+
+- Bash 5+
+- Git 2+
 - Homebrew (macOS) or equivalent package manager
 
 ## Installation
@@ -32,13 +32,13 @@ brew bundle install  # Install dependencies (macOS)
 **Brewfile** installs:
 
 - Shell: bash, bash-completion, bash-git-prompt, tmux
-- Editors: neovim, vim
+- Editor: neovim
 - Modern CLI tools: bat (cat), eza (ls), fd (find), zoxide (smart cd), ripgrep, fzf
 - Data tools: jq (JSON), yq (YAML)
 - Utilities: btop (process viewer), tldr (man pages), httpie (HTTP client)
 - Development: git, git-delta, asdf
 - Security: gnupg, pinentry-mac
-- Fonts: Fira Code, Hack Nerd Font
+- Font: Fira Code Nerd Font
 
 **install script**:
 
@@ -62,7 +62,11 @@ Create `~/.gitconfig.local` for personal Git settings:
 
 ## Key Bindings
 
-### Vim/Neovim
+Type `?` in your terminal for a comprehensive keybinding reference covering Bash, Git, Tmux, and Vim/Neovim.
+
+### Quick Reference
+
+**Vim/Neovim:**
 
 - `gd` - Go to definition
 - `K` - Hover documentation
@@ -70,7 +74,7 @@ Create `~/.gitconfig.local` for personal Git settings:
 - `<leader>ca` - Code actions
 - `<leader>rc/rm/rv/rs/rf` - Rails navigation (controller/model/view/spec/factory)
 
-### Tmux
+**Tmux:**
 
 - `Ctrl-a` - Prefix key
 - `Ctrl-a |` - Split vertically
@@ -108,6 +112,7 @@ Additional utilities:
 ├── gitmessage            # Commit message template
 ├── install               # Installation script
 └── bin/                  # Custom scripts
+    ├── ?                 # Quick keybinding reference
     ├── docker-clean      # Docker cleanup utility
     ├── git-both-merged   # Show merged branches
     └── replace           # Find and replace with ripgrep
@@ -123,8 +128,14 @@ git pull
 ./install
 ```
 
-For Vim plugins: `:PlugUpdate` in Vim/Neovim  
-For Tmux plugins: `<prefix> + I` in Tmux
+Update components:
+
+- **Vim plugins**: `:PlugUpdate` in Neovim
+- **LSP servers**: `:MasonUpdate` in Neovim
+- **Treesitter parsers**: `:TSUpdate` in Neovim
+- **Tmux plugins**: `<prefix> + U` in Tmux (or `<prefix> + I` to install new plugins)
+
+**Note**: On first launch, Neovim automatically installs configured LSP servers (Mason) and syntax parsers (Treesitter) based on your `vimrc` settings.
 
 ## Customization
 
