@@ -111,6 +111,14 @@ Additional utilities:
 ├── gitignore_global      # Global gitignore patterns
 ├── gitmessage            # Commit message template
 ├── install               # Installation script
+├── nvim/                 # Neovim Lua configuration
+│   └── lua/config/       # Modular Lua configs
+│       ├── lsp.lua       # LSP and Mason setup
+│       ├── completion.lua # Autocompletion
+│       ├── treesitter.lua # Syntax highlighting
+│       ├── formatting.lua # Formatters and linters
+│       ├── editor.lua    # Editor enhancements
+│       └── keymaps.lua   # Additional keymaps
 └── bin/                  # Custom scripts
     ├── ?                 # Quick keybinding reference
     ├── docker-clean      # Docker cleanup utility
