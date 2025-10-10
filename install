@@ -47,6 +47,7 @@ if git --version &>/dev/null; then
 
       ln -sfv ~/.vim $XDG_CONFIG_HOME/nvim
       ln -sfv ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+      ln -sfv "$here/nvim/lua" $XDG_CONFIG_HOME/nvim/lua && echo "Neovim Lua config linked"
     fi
   else
     echo "Vim not installed. Please install it and run this script again."
