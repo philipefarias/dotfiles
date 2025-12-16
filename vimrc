@@ -57,7 +57,7 @@ Plug 'nvim-lua/plenary.nvim'                      " Required by none-ls
 
 " Syntax highlighting and code intelligence
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Advanced syntax highlighting
-Plug 'nvim-treesitter/nvim-treesitter-textobjects' " Additional textobjects
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects' " Additional textobjects (temporarily disabled - incompatible with latest treesitter)
 
 " Code editing helpers
 Plug 'windwp/nvim-autopairs'                      " Auto close brackets
