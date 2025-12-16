@@ -1,7 +1,7 @@
 -- Treesitter Configuration
 -- Syntax highlighting and text objects
 
-require('nvim-treesitter.configs').setup({
+require('nvim-treesitter.config').setup({
   ensure_installed = { 
     -- JavaScript/Node.js
     "javascript", "json", "bash", "markdown", "yaml", "lua",
