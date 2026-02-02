@@ -2,6 +2,8 @@
 -- Syntax highlighting and text objects
 
 require('nvim-treesitter.config').setup({
+  -- Auto-install missing parsers when entering a buffer
+  auto_install = true,
   ensure_installed = { 
     -- Ruby/Rails
     "ruby",
