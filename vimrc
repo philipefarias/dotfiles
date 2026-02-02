@@ -11,6 +11,9 @@ set ttimeoutlen=100        " decrease timeout for faster insert with 'O'
 set updatetime=250         " Decrease time for faster gitgutter refresh
 set clipboard+=unnamedplus " use the clipboard for all operations
 set noshowmode             " Don't show vim mode below the statusline
+set signcolumn=yes         " Always show sign column to prevent layout shift
+set splitright             " Open vertical splits to the right
+set splitbelow             " Open horizontal splits below
 
 " Settings that aren't needed by neovim (usually they are set by default)
 if !has('nvim')
