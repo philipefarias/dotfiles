@@ -28,9 +28,14 @@
   default = simple
 [commit]
   template = ~/.gitmessage
-	gpgsign = true
+  gpgsign = true
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [include]
   path = .gitconfig.local
   path = .gittheme
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
