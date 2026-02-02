@@ -38,8 +38,10 @@ endif
 " Initialize plug.vim
 call plug#begin('~/.vim/plugged')
 
-" Language support - general
-Plug 'sheerun/vim-polyglot'
+" Language support - general (Vim only, Neovim uses Treesitter)
+if !has('nvim')
+  Plug 'sheerun/vim-polyglot'
+endif
 
 " Syntax highlighting and code intelligence
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Advanced syntax highlighting
