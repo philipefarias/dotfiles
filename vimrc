@@ -92,8 +92,10 @@ call plug#end()
 " Disable LSP support in ALE completely
 let g:ale_disable_lsp = 1
 
-" % to bounce from do to end etc.
-runtime macros/matchit.vim
+" % to bounce from do to end etc. (bundled with Neovim)
+if !has('nvim')
+  runtime macros/matchit.vim
+endif
 
 
 ""
