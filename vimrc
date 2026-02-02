@@ -284,6 +284,7 @@ lua << EOF
 vim.deprecate = function() end
 
 -- Load configuration modules
+require('config.filetypes')
 require('config.treesitter')
 require('config.editor')
 require('config.keymaps')
