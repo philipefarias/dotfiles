@@ -31,9 +31,13 @@ require('nvim-treesitter.config').setup({
     
     -- Shell/Scripts
     "bash",
+    "zsh",
     
     -- Config files
     "dockerfile",
+    "editorconfig",
+    "readline",
+    "terraform",
     "vim",
     "vimdoc",
     "lua",
