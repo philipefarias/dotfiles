@@ -21,6 +21,8 @@ require('nvim-treesitter.config').setup({
     "scss",
     
     -- Data formats
+    "csv",
+    "graphql",
     "json",
     "jsonc",              -- JSON with comments (VS Code configs)
     "yaml",
