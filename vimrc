@@ -26,7 +26,7 @@ if !has('nvim')
   if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
     syntax on
   endif
-end
+endif
 
 ""
 "" Plugins and Macros
@@ -147,7 +147,7 @@ set listchars+=precedes:«             " The character to show in the last colum
 
 if !has('nvim')
   set backspace=indent,eol,start " backspace through everything in insert mode
-end
+endif
 
 
 ""
@@ -160,7 +160,7 @@ set smartcase  " ... unless they contain at least one capital letter
 if !has('nvim')
   set hlsearch  " highlight matches
   set incsearch " incremental searching
-end
+endif
 
 
 ""
