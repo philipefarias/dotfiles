@@ -44,8 +44,7 @@ if !has('nvim')
 endif
 
 " Syntax highlighting and code intelligence
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Advanced syntax highlighting
-" Plug 'nvim-treesitter/nvim-treesitter-textobjects' " Additional textobjects (temporarily disabled - incompatible with latest treesitter)
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Code editing helpers
 Plug 'windwp/nvim-autopairs'                      " Auto close brackets
