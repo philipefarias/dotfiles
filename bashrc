@@ -116,7 +116,7 @@ source_env () {
 
 # Must have Homebrew installed and 'bash_completion' with it
 if [ "$(uname)" == "Darwin" ] && [ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]; then
-  . $(brew --prefix)/etc/profile.d/bash_completion.sh
+  [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 fi
 
 
