@@ -3,9 +3,6 @@
 
 -- Auto pairs
 require('nvim-autopairs').setup({})
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local cmp = require('cmp')
-cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
 -- Comment.nvim
 require('Comment').setup()
@@ -46,17 +43,6 @@ wk.add({
   { "<leader>a", desc = "Test suite" },
   { "<leader>l", desc = "Test last" },
   { "<leader>g", desc = "Test visit" },
-  
-  -- LSP commands
-  { "<leader>d", desc = "Show diagnostics" },
-  { "<leader>rn", desc = "Rename symbol" },
-  { "<leader>ca", desc = "Code actions" },
-  { "gd", desc = "Go to definition" },
-  { "gr", desc = "Find references" },
-  { "gi", desc = "Go to implementation" },
-  { "K", desc = "Hover documentation" },
-  { "[d", desc = "Previous diagnostic" },
-  { "]d", desc = "Next diagnostic" },
   
   -- Rails navigation
   { "<leader>r", group = "Rails" },
