@@ -10,6 +10,12 @@ done
 
 echo
 
+echo "===> Linking AI tool configs:"
+mkdir -p "${HOME}/.claude"
+ln -sfv "$here/claude/CLAUDE.md" "${HOME}/.claude/CLAUDE.md"
+
+echo
+
 echo "===> Linking binaries:"
 if [ ! -d "${HOME}/.bin" ]; then
   mkdir "${HOME}/.bin"
