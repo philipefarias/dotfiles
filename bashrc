@@ -182,3 +182,6 @@ if which aws-sso-util > /dev/null; then
     source $_AWS_SSO_UTIL_COMPLETE_SCRIPT
   fi
 fi
+
+# Local overrides (not tracked in dotfiles — API tokens, machine-specific config)
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local
