@@ -21,3 +21,20 @@ Procfile.dev
 
 # Rails
 config_override.rb
+
+# AI/LLMs
+AGENTS.md
+CLAUDE.md
+opencode.json
+/.claude/
+### Shifts ###
+NIGHT_SHIFT_LOG.md
+DAY_SHIFT_LOG.md
+SHIFT_HANDOFF.md
+.day-shift/
+TECH_DOCS_LOG.md
+### Skills ###
+.srm-gateway.toml
+### Other tools ###
+.code-review-graph/
+.code-review-graphignore
