@@ -1,0 +1,18 @@
+{
+  "enabledPlugins": {
+    "ruby-lsp@claude-plugins-official": true
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "code-review-graph update 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}

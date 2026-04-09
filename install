@@ -14,6 +14,8 @@ echo "===> Linking AI tool configs:"
 mkdir -p "${HOME}/.claude"
 ln -sfv "$here/claude/CLAUDE.md" "${HOME}/.claude/CLAUDE.md"
 
+ln -sfv "$here/claude/settings.json" "${HOME}/.claude/settings.json"
+
 echo
 
 echo "===> Linking binaries:"
