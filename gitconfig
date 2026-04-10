@@ -8,7 +8,7 @@
   lg = log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --graph
   pr = !gh pr create
   st = status
-  up = !git fetch origin && git rebase origin/master
+  up = !git fetch origin && git rebase origin/HEAD
 
   # Show the diff between the latest commit and the current state
   d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
