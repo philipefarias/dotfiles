@@ -26,6 +26,12 @@ config_override.rb
 AGENTS.md
 CLAUDE.md
 opencode.json
+.cursor/
+.cursorrules
+.mcp.json
+.opencode.json
+.windsurfrules
+GEMINI.md
 /.claude/
 ### Shifts ###
 NIGHT_SHIFT_LOG.md
