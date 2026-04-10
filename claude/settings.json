@@ -9,7 +9,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "flock -n /tmp/code-review-graph.lock code-review-graph update --skip-flows",
+            "command": "if command -v flock >/dev/null 2>&1; then flock -n /tmp/code-review-graph.lock code-review-graph update --skip-flows; else code-review-graph update --skip-flows; fi",
             "timeout": 5000
           }
         ]
