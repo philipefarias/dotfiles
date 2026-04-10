@@ -30,6 +30,7 @@ brew "yq"               # YAML processor
 
 # System utilities
 brew "btop"             # Beautiful process viewer
+brew "flock"            # File locking for shell scripts
 brew "tldr"             # Simplified man pages
 
 # HTTP clients
