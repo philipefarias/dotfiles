@@ -10,7 +10,6 @@ brew "tmux"
 
 # Version control
 brew "git"
-brew "git-delta"        # Alternative to diff-so-fancy
 brew "diff-so-fancy"
 
 # Editor
