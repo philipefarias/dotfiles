@@ -6,7 +6,7 @@
   co = checkout
   l  = log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --no-merges
   lg = log --format='%Cred%h%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset%C(yellow)%d%Creset' --graph
-  pr = !hub pull-request
+  pr = !gh pr create
   st = status
   up = !git fetch origin && git rebase origin/master
 

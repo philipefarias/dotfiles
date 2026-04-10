@@ -87,9 +87,6 @@ fi
 alias grep="grep -n --color"
 
 # Development commands
-if hub --version &>/dev/null; then
-  alias git=hub
-fi
 alias pgr='pg_restore --no-acl --no-owner -h localhost -d'
 
 # Platform-specific
