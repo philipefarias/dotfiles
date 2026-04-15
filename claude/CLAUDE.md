@@ -19,7 +19,7 @@ Apply these conventions to all written output — code comments, commit messages
 
 ## PR & Code Review Conventions
 
-When writing PR comments, review feedback, PR descriptions, or any code-review communication on Decisiv repos, follow the conventions in `~/Decisiv/decisiv-claude-tools/references/pr-review-conventions.md`. Read that file before your first review action in a session.
+When writing PR comments, review feedback, PR descriptions, or any code-review communication on Decisiv repos, follow the conventions in `~/Decisiv/dev-tools/workflows/pr-review-conventions.md`. Read that file before your first review action in a session.
 
 ## Prefer patterns over enumeration
 
