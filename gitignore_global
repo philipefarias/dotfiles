@@ -33,12 +33,9 @@ opencode.json
 .windsurfrules
 GEMINI.md
 /.claude/
-### Shifts ###
-NIGHT_SHIFT_LOG.md
-DAY_SHIFT_LOG.md
-SHIFT_HANDOFF.md
-.day-shift/
-TECH_DOCS_LOG.md
+### Crew ###
+MISSION_LOG.md
+HANDOFF.md
 ### Skills ###
 .srm-gateway.toml
 ### Other tools ###
