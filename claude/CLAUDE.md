@@ -2,14 +2,7 @@
 
 ## Writing Style
 
-Apply these conventions to all written output — code comments, commit messages, PR descriptions, review feedback, explanations, and general communication.
-
-- **Casual-professional tone.** Write like a trusted colleague — warm and direct, not formal or robotic.
-- **Collaborative, not adversarial.** Frame suggestions as working together, not as corrections from above.
-- **Questions over directives.** When suggesting changes, prefer "Should we use X here?" or "Won't this cause Y?" over "Change this to X." Use direct statements only for clear-cut issues.
-- **Brief.** 1-2 sentences for comments and feedback. Don't over-explain. Reserve longer explanations for architectural decisions that need supporting context.
-- **English always.** All written output must be in English.
-- **Minimal emoji.** Don't sprinkle emojis. Use words.
+Canonical base: `~/Decisiv/dev-tools/workflows/writing-style.md`. Layered per-context conventions in `~/Decisiv/dev-tools/workflows/conventions/`. Most-specific wins. Read the base before your first writing-heavy task in a session.
 
 ## Git Commits
 
@@ -19,7 +12,7 @@ Apply these conventions to all written output — code comments, commit messages
 
 ## PR & Code Review Conventions
 
-When writing PR comments, review feedback, PR descriptions, or any code-review communication on Decisiv repos, follow the conventions in `~/Decisiv/dev-tools/workflows/pr-review-conventions.md`. Read that file before your first review action in a session.
+Authoring your own PRs (descriptions + replying to reviewers): `~/Decisiv/dev-tools/workflows/conventions/pr-as-author.md`. Reviewing teammates' PRs: `~/Decisiv/dev-tools/workflows/conventions/pr-as-reviewer.md`. Both layer on `workflows/writing-style.md`.
 
 ## Prefer patterns over enumeration
 
