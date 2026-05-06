@@ -1,7 +1,5 @@
 {
-  "enabledPlugins": {
-    "ruby-lsp@claude-plugins-official": true
-  },
+  "skillListingBudgetFraction": 0.02,
   "permissions": {
     "allow": [
       "Read",
@@ -9,7 +7,6 @@
       "Write",
       "Glob",
       "Grep",
-
       "Bash(git status*)",
       "Bash(git diff*)",
       "Bash(git log*)",
@@ -20,7 +17,6 @@
       "Bash(git config*)",
       "Bash(git submodule status*)",
       "Bash(git rev-parse*)",
-
       "Bash(git stash*)",
       "Bash(git checkout*)",
       "Bash(git switch*)",
@@ -28,7 +24,6 @@
       "Bash(git commit*)",
       "Bash(git mv*)",
       "Bash(git reset --soft*)",
-
       "Bash(git push*origin feature/*)",
       "Bash(git push*origin wip/*)",
       "Bash(git push*origin fix/*)",
@@ -36,13 +31,11 @@
       "Bash(git push*origin refactor/*)",
       "Bash(git rebase origin/master*)",
       "Bash(git rebase origin/main*)",
-
       "Bash(gh pr*)",
       "Bash(gh issue*)",
       "Bash(gh run*)",
       "Bash(gh api*)",
       "Bash(gh repo*)",
-
       "Bash(ls*)",
       "Bash(mkdir*)",
       "Bash(cat*)",
@@ -62,37 +55,47 @@
       "Bash(chmod +x*)",
       "Bash(touch*)",
       "Bash(xargs*)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(ln *)",
+      "Bash(rm *)",
       "Bash(python3*)",
+      "Bash(uv *)",
+      "Bash(asdf *)",
+      "Bash(pyenv *)",
+      "Bash(nvm *)",
+      "Bash(rbenv *)",
+      "Bash(awk *)",
+      "Bash(/usr/bin/awk *)",
       "Bash(ruby -v*)",
       "Bash(gem list*)",
       "Bash(cd*)",
-
       "Bash(make*)",
       "Bash(npx *)",
       "Bash(npm *)",
       "Bash(curl -s *)",
-
+      "Bash(curl -fsS *)",
+      "Bash(curl -fsSL *)",
+      "Bash(gunzip *)",
+      "Bash(gzip *)",
+      "Bash(tar *)",
       "Bash(docker compose*ps*)",
       "Bash(docker ps*)",
       "Bash(docker inspect*)",
       "Bash(docker logs*)",
-
       "Bash(bash ~/Decisiv/dev-tools/scripts/*)",
       "Bash(bash ~/Decisiv/dev-tools/install.sh*)",
+      "Bash(~/.claude/skills/humio-search/scripts/humio_search.py *)",
       "Bash(bash /Users/philipe/Decisiv/dev-tools/scripts/*)",
       "Bash(bash /Users/philipe/Decisiv/dev-tools/install.sh*)",
-
+      "Bash(/Users/philipe/.claude/skills/humio-search/scripts/humio_search.py *)",
       "Bash(/Users/philipe/.claude/skills/srm-gateway/scripts/*)",
-
       "Bash(code-review-graph*)",
-
       "Bash(bash -n *)",
       "Bash(shellcheck*)",
-
       "Skill(oauth)",
       "Skill(srm-gateway)",
       "Skill(update-config)",
-
       "mcp__claude_ai_Atlassian__getJiraIssue",
       "mcp__claude_ai_Atlassian__searchJiraIssuesUsingJql",
       "mcp__claude_ai_Atlassian__getVisibleJiraProjects",
@@ -113,28 +116,53 @@
       "mcp__claude_ai_Atlassian__searchAtlassian",
       "mcp__claude_ai_Atlassian__getAccessibleAtlassianResources",
       "mcp__claude_ai_Atlassian__atlassianUserInfo",
-
       "mcp__circleci-mcp-server__get_latest_pipeline_status",
       "mcp__circleci-mcp-server__get_build_failure_logs",
       "mcp__circleci-mcp-server__get_job_test_results",
       "mcp__circleci-mcp-server__find_flaky_tests",
       "mcp__circleci-mcp-server__list_followed_projects",
-
       "mcp__code-review-graph__*",
-
       "mcp__claude_ai_Slack__slack_read_channel",
       "mcp__claude_ai_Slack__slack_read_thread",
       "mcp__claude_ai_Slack__slack_read_user_profile",
       "mcp__claude_ai_Slack__slack_search_channels",
       "mcp__claude_ai_Slack__slack_search_users",
       "mcp__claude_ai_Slack__slack_search_public",
-
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:code.claude.com)",
-
+      "WebFetch(domain:docs.claude.com)",
+      "WebFetch(domain:platform.claude.com)",
+      "WebFetch(domain:anthropic.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:claude.ai)",
+      "WebFetch(domain:console.anthropic.com)",
+      "WebFetch(domain:support.anthropic.com)",
+      "WebFetch(domain:help.claude.com)",
+      "WebFetch(domain:status.claude.com)",
+      "WebFetch(domain:status.anthropic.com)",
+      "WebFetch(domain:docs.crewai.com)",
+      "WebFetch(domain:microsoft.github.io)",
+      "WebFetch(domain:langchain-ai.github.io)",
+      "WebFetch(domain:mastra.ai)",
+      "WebFetch(domain:learn.microsoft.com)",
+      "WebFetch(domain:kuzudb.github.io)",
+      "WebFetch(domain:kuzudb.com)",
+      "WebFetch(domain:oxigraph.org)",
+      "WebFetch(domain:networkx.org)",
+      "WebFetch(domain:sqlite.org)",
+      "WebFetch(domain:duckdb.org)",
+      "WebFetch(domain:www.w3.org)",
+      "WebFetch(domain:docs.rs)",
+      "WebFetch(domain:cozodb.org)",
+      "WebSearch",
       "Read(//Users/philipe/Decisiv/**)",
-      "Read(//private/tmp/**)"
+      "Read(//private/tmp/**)",
+      "Read(~/.claude/crew-tmp/**)",
+      "Edit(~/.claude/crew-tmp/**)",
+      "Write(~/.claude/crew-tmp/**)",
+      "Bash(git init:*)",
+      "Bash(/bin/ls:*)"
     ],
     "deny": [
       "Bash(rm -rf /)",
@@ -146,14 +174,12 @@
       "Bash(dd if=* of=/dev/*)",
       "Bash(chmod 777*)",
       "Bash(chmod -R 777*)",
-
       "Bash(sudo *)",
       "Bash(su *)",
       "Bash(su -)",
       "Bash(doas *)",
       "Bash(pkexec *)",
       "Bash(*> /dev/sd*)",
-
       "Bash(*--no-verify*)",
       "Bash(git push --force*)",
       "Bash(git push -f *)",
@@ -164,19 +190,20 @@
       "Bash(git checkout -- .)",
       "Bash(git branch -D main)",
       "Bash(git branch -D master)",
-
       "Bash(docker volume rm*)",
       "Bash(docker volume prune*)",
       "Bash(docker system prune*)",
       "Bash(docker rm -f*)",
       "Bash(docker stop*)",
       "Bash(docker kill*)",
-
       "Bash(curl * | bash*)",
       "Bash(curl * | sh*)",
       "Bash(wget * | bash*)",
       "Bash(wget * | sh*)",
-
+      "Bash(awk * | sh)",
+      "Bash(awk * | bash)",
+      "Bash(awk * | sh *)",
+      "Bash(awk * | bash *)",
       "Read(**/.ssh/*)",
       "Grep(**/.ssh/*)",
       "Read(**/*.gpg)",
@@ -197,36 +224,33 @@
       "Grep(**/.vault-token)"
     ],
     "ask": [
-      "WebFetch",
-      "WebSearch",
-
       "Bash(rm -rf *)",
       "Bash(rm -r *)",
-
       "Bash(env)",
       "Bash(env *)",
       "Bash(printenv)",
       "Bash(printenv *)",
-
       "Bash(launchctl *)",
       "Bash(brew *)",
+      "Bash(asdf install*)",
+      "Bash(asdf plugin add*)",
+      "Bash(asdf plugin update*)",
+      "Bash(pyenv install*)",
+      "Bash(nvm install*)",
+      "Bash(rbenv install*)",
       "Bash(kill -9*)",
       "Bash(pkill*)",
-
       "Bash(docker run*)",
       "Bash(docker exec*)",
       "Bash(docker compose*up*)",
       "Bash(docker compose*down*)",
       "Bash(docker compose*restart*)",
       "Bash(docker build*)",
-
       "Bash(pg_dump*)",
       "Bash(pg_restore*)",
       "Bash(psql*)",
-
       "Bash(git push origin main*)",
       "Bash(git push origin master*)",
-
       "mcp__claude_ai_Atlassian__createConfluencePage",
       "mcp__claude_ai_Atlassian__updateConfluencePage",
       "mcp__claude_ai_Atlassian__createConfluenceFooterComment",
@@ -235,14 +259,11 @@
       "mcp__claude_ai_Atlassian__editJiraIssue",
       "mcp__claude_ai_Atlassian__addCommentToJiraIssue",
       "mcp__claude_ai_Atlassian__transitionJiraIssue",
-
       "mcp__claude_ai_Slack__slack_send_message",
       "mcp__claude_ai_Slack__slack_send_message_draft",
       "mcp__claude_ai_Slack__slack_schedule_message",
-
       "mcp__circleci-mcp-server__run_pipeline",
       "mcp__circleci-mcp-server__rerun_workflow",
-
       "Read(**/.env*)",
       "Grep(**/.env*)",
       "Read(**/credentials*)",
@@ -257,7 +278,6 @@
       "Grep(**/*.pem)",
       "Read(**/*.key)",
       "Grep(**/*.key)",
-
       "Read(~/.bashrc)",
       "Read(~/.bash_profile)",
       "Read(~/.zshrc)",
@@ -273,15 +293,8 @@
       "Edit(~/.zshrc)",
       "Edit(~/.zshenv)",
       "Edit(~/.zprofile)"
-    ]
-  },
-  "sandbox": {
-    "network": {
-      "allowedDomains": [
-        "*.decisivapps.com",
-        "cloud.humio.com"
-      ]
-    }
+    ],
+    "defaultMode": "auto"
   },
   "hooks": {
     "PostToolUse": [
@@ -290,7 +303,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if command -v flock >/dev/null 2>&1; then flock -n /tmp/code-review-graph.lock code-review-graph update --skip-flows; else code-review-graph update --skip-flows; fi",
+            "command": "if command -v flock >/dev/null 2>&1; then flock -n /tmp/code-review-graph.lock code-review-graph update --skip-flows; rc=$?; [ \"$rc\" = 1 ] && exit 0; exit $rc; else code-review-graph update --skip-flows; fi",
             "timeout": 5000
           }
         ]
@@ -302,6 +315,15 @@
           {
             "type": "command",
             "command": "code-review-graph status",
+            "timeout": 3000
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/Decisiv/dev-tools/scripts/hooks/session-start-check-handoff.sh",
             "timeout": 3000
           }
         ]
@@ -317,6 +339,110 @@
           }
         ]
       }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/Decisiv/dev-tools/scripts/hooks/user-prompt-submit-enforce-mission-log.sh",
+            "timeout": 2000
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/Decisiv/dev-tools/scripts/hooks/subagent-stop-log-dispatch.sh",
+            "timeout": 2000
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/Decisiv/dev-tools/scripts/hooks/pre-tool-bash-warn-cross-project-edit.sh",
+            "timeout": 2000
+          }
+        ]
+      }
     ]
-  }
+  },
+  "enabledPlugins": {
+    "ruby-lsp@claude-plugins-official": true
+  },
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "*.decisivapps.com",
+        "cloud.humio.com"
+      ]
+    }
+  },
+  "_comment": "Personal global Claude Code config. Canonical project baseline lives at workflows/templates/CLAUDE_SETTINGS_TEMPLATE.json in dev-tools. When you add a permission, update the matching _notes group so the rationale stays explicit — grep shows what, _notes shows why.",
+  "_notes": {
+    "allow": {
+      "awk_classification": "awk classification probes — added 2026-05-04 mission 2026-05-04-2 (downstream of 2026-05-04-1 harness-pilot-redirect-to-dev-tools which surfaced 4 user-visible awk approval prompts during Reviewer + Analyst dispatches). Both bare `Bash(awk *)` and absolute-path `Bash(/usr/bin/awk *)` forms needed: specialists may invoke `/usr/bin/awk` explicitly to avoid asdf-managed shim resolution per memory feedback_pre_auth_scan_at_triage.md class 17. Spaced form (`awk *`) per word-boundary precedent from mission 2026-05-03-3 (avoids matching `awkward` etc.). Bounded by 4 deny entries against pipe-to-shell shapes (`Bash(awk * | sh)`, `Bash(awk * | bash)`, etc.). Residual risks (two — accept as known limitations per Shell Safety review): (a) `system(\"...\")` calls inside awk programs are unbounded by prefix matchers (string-internal, can't pattern-match); (b) indirection via xargs (`awk '...' | xargs sh -c {}`, `awk '...' | xargs -I{} bash -c {}`) escapes the pipe-to-shell deny because xargs is the executor, not a shell pipe target. Cross-link: memory precedent block 2026-05-04 in feedback_pre_auth_scan_at_triage.md (probe-shape catalog by dispatch role); HANDOFF pending `pipe-to-shell-deny-coverage-zsh-dash-fish-csh` (cross-shell coverage gap across awk + curl + wget — separate mission).",
+      "builtins": "Core Claude Code tools used on every turn. Always on.",
+      "git_read": "Read-only git ops — status/diff/log/show/branch/fetch/remote/config/submodule/rev-parse/stash. Safe anywhere; deny list gates the destructive counterparts.",
+      "git_write": "Low-risk write ops — checkout, switch, add, commit, mv, and reset --soft (never --hard; that's in deny). Push is scoped to feature/ wip/ fix/ chore/ refactor/ branches; main/master push falls through to ask. Rebase is scoped to origin/main|master so the agent can't rewrite arbitrary history during a rebase-onto.",
+      "gh": "GitHub CLI read-ish ops — pr/issue/run/api/repo. Reviewers dispatched via /review-pr rely on these.",
+      "fs_shell": "Shell utilities used to move text and inspect files — ls, cat, head, tail, wc, which, find, grep, rg, sort, uniq, diff, echo, pwd, date. Includes benign writes (mkdir, chmod +x, touch, xargs) and compression utilities (gunzip, gzip, tar). Filesystem traversal (cp/mv/ln/rm) lives in `fs_traversal` below — moved out of `fs_shell` 2026-05-03 (mission 2026-05-03-3) when the rm-stays-in-ask claim was inverted. Added 2026-05-01 (mission 2026-05-01-6): gunzip/gzip/tar to support research-workflow decompression (e.g., wayback `id_` route returning gzipped HTML); root-cause Bash-redirect-into-crew-tmp-flagged-as-sensitive issue tracked separately as a Workflow Improvement TODO.",
+      "fs_traversal": "Filesystem-traversal verbs — cp, mv, ln, rm — pre-authorized as bare allow entries (`Bash(cp *)`, `Bash(mv *)`, `Bash(ln *)`, `Bash(rm *)`). Closes pre-auth-scan class 8 (memory `feedback_pre_auth_scan_at_triage.md`). **Safety boundary:** Claude Code permission precedence is `deny > ask > allow, first match wins` (verified 2026-05-03 mission 2026-05-03-3 by Shell Safety Reviewer against https://code.claude.com/docs/en/permissions); the existing `rm -rf` deny entries (`rm -rf /`, `rm -rf /*`, `rm -rf ~`, `rm -rf ~/*`, `rm -rf .`) and ask entries (`Bash(rm -rf *)`, `Bash(rm -r *)`) take precedence over the new `Bash(rm *)` allow, so destructive recursive forms still hit deny/ask. Non-recursive `rm` forms (single-file `rm <path>`, multi-file `rm a b c`, force-but-non-recursive `rm -f <path>`) are the only things this allow unlocks; any `-r` / `-rf` form falls through to ask or deny. **Trailing space convention:** all four entries use `Bash(<verb> *)` (with space) so the matcher requires a word boundary — prevents accidental matches against future `cpio`-style binaries. **Known tradeoffs:** (a) `ln -sf <evil> ~/.claude/<file>` could clobber via symlink (rare; PreToolUse cross-project warning hook adds advisory coverage), (b) `mv` is destructive on the source side and crosses project boundaries silently (covered by same PreToolUse hook). Cross-link: HANDOFF mission `bash-allow-list-expansion-filesystem-and-version-managers` (this mission), HANDOFF pending `pretooluse-bash-matcher-outcome-logging-hook` (Layer-2 friction observability).",
+      "humio_search_script": "Allows direct invocation of ~/.claude/skills/humio-search/scripts/humio_search.py without per-call approval prompts; sub-agents (Investigator/Analyst/Reviewer) routinely query Humio for log evidence at Phase 0 and during root-cause investigation. Both tilde and absolute-path forms required per memory class 17 (absolute-path-binary defeats command-name prefix matchers). Read-only HTTP queries to Humio (cloud.humio.com via HUMIO_BASE_URL env). humio_search.py source audit (mission 2026-05-04-4 Shell Safety Reviewer briefing): pure urllib.request + argparse + json — no subprocess/os.system/shell=True/exec/eval, no filesystem writes, no path-traversal. Pipe-to-shell residual exec risk: existing curl/wget/awk-shape pipe-to-shell deny entries match by command-prefix (curl/wget/awk), so they do NOT intercept `humio_search.py * | sh`/`| bash`; the actual safety net is fall-through to user-approval ask-tier. If a future incident motivates structural intercept, add parallel `Bash(*humio_search.py* | sh*)` / `| bash*` / cross-shell denies (HANDOFF pending `pipe-to-shell-deny-coverage-zsh-dash-fish-csh` covers the cross-shell sibling). Residual risk 1 (LLM-input-trust, NOT shell-safety): Humio log content returned to agent as JSON; attackers who can plant data in Humio (log-forging) may inject instructions the agent might act on; this allow envelope does NOT cover content trust. Residual risk 2 (auth-token argv leak): --token <value> lands in ps/shell-history; prefer HUMIO_API_TOKEN env var. Closes HANDOFF pending humio-search-script-allow-entry.",
+      "lang": "Language runtime probes — python3 for JSON tooling, ruby -v and gem list for Portal/Pricing, cd for shell housekeeping.",
+      "uv": "Substrate-pilot mission 2026-05-02-11 added uv for pyoxigraph venv install; broad-allow because uv is the canonical modern Python package manager and the asdf-shimmed python3 resolves to 3.6.15 (too old for pyoxigraph) while Homebrew's python3.13 rejects pip install --user per PEP 668. uv venv + uv pip install is the clean isolation path.",
+      "version_managers": "Language version managers — asdf, pyenv, nvm, rbenv — pre-authorized as bare allow entries (`Bash(asdf *)`, `Bash(pyenv *)`, `Bash(nvm *)`, `Bash(rbenv *)`). Closes pre-auth-scan class 9 (memory `feedback_pre_auth_scan_at_triage.md`) — common during cross-stack work for runtime version detection (e.g., `asdf list python` to choose `namedtuple` vs `@dataclass` for compat; `nvm current` for Node-script compatibility). **Safety boundary:** `<vm> install` operations download + compile arbitrary upstream code — same trust class as `brew install` — and are gated in `ask` (see `_notes.ask.version_manager_writes`). Read-only inspection (`asdf list`, `pyenv versions`, `nvm current`, `rbenv which`) and local-state changes (`asdf reshim`, `pyenv rehash`, `asdf global/local`) remain broadly allowed because they don't fetch network code. Cross-link: HANDOFF mission `bash-allow-list-expansion-filesystem-and-version-managers` (this mission); brew precedent in `ask.system_mgmt`.",
+      "build_fetch": "Build and fetch — make, npx, npm, curl -s (silent), curl -fsS (silent + fail-on-HTTP-error + show-errors), curl -fsSL (same + follow-redirects). Interactive curl falls through; curl|bash and curl|sh are denied. Robust shapes added 2026-05-01 (mission 2026-05-01-6) for the wayback `id_` route research pattern (HANDOFF pending `wayback-id-fetch-pattern`).",
+      "docker_read": "Read-only docker ops — compose ps, ps, inspect, logs. Mutating ops (run/exec/up/down/restart/build) stay in ask.",
+      "dev_tools_scripts": "Crew-workflow scripts under ~/Decisiv/dev-tools/scripts/ plus install.sh. Both tilde and absolute paths listed because matchers don't expand ~.",
+      "bash_validation": "Syntax/lint tools invoked during Shell Safety Reviewer pre-flight — bash -n and shellcheck.",
+      "skills": "Personal skill invocations that don't need per-run confirmation — oauth, srm-gateway, update-config.",
+      "mcp_read": "Read-only MCP operations — Atlassian (Jira/Confluence fetch, search, metadata), CircleCI (pipeline status, logs, test results), code-review-graph (all), Slack (read/search). Write counterparts (create/edit/transition/post) stay in ask.",
+      "web_fetch": "WebFetch pre-approved domains — GitHub (github.com, raw.githubusercontent.com) for PR context; Anthropic surface (code.claude.com, docs.claude.com, platform.claude.com, anthropic.com, www.anthropic.com, claude.ai, console.anthropic.com, support.anthropic.com, help.claude.com, status.claude.com, status.anthropic.com) for model/API research, account/console, support, and incident-status. WebFetch's redirect-following requires per-host allowlisting and the matcher grammar does not support wildcards (no `*.claude.com`), so each subdomain is listed explicitly. Wider Anthropic surface added 2026-05-01 (mission S1 — friction-reduction batch, pre-empts per-redirect approval prompts; HANDOFF pending `pre-approve-anthropic-webfetch-surface`). Engine-default prompt-on-no-match is the catch-all for everything else (no explicit ask[WebFetch] needed — bare ask rule was removed 2026-05-06 per /doctor unreachable-rules diagnosis; it was shadowing all 27 specific allows). WebSearch is always on. **Track-A-bounded** (added 2026-04-30, mission 2026-04-30-8 — remove when eval/framework cluster Track A surveys complete + Track D synthesis lands; tracked in HANDOFF.md pending `track-a-webfetch-cleanup`): docs.crewai.com, microsoft.github.io, langchain-ai.github.io, mastra.ai, learn.microsoft.com. **Substrate-tool-family-bounded** (added 2026-05-02, mission 2026-05-02-9 — pre-empts per-domain approval prompts during composition #4 graph-DB / RDF / search-index / relational-as-graph candidate surveys; remove when downstream pilot mission lands and tool family is selected; tracked in HANDOFF.md pending `substrate-tool-family-webfetch-cleanup`): kuzudb.github.io, kuzudb.com, oxigraph.org, networkx.org, sqlite.org, duckdb.org, www.w3.org, docs.rs, cozodb.org. **GitHub repo content goes through `gh` CLI**, not WebFetch — github.com WebFetch is only for PR pages, README rendering, and similar HTML; raw repo file content uses `gh api ... -H 'Accept: application/vnd.github.v3.raw'` per memory `feedback_github_repo_inspection.md`.",
+      "fs_scopes": "Explicit Read/Edit/Write scopes — full access under ~/Decisiv/ and /private/tmp/, and ~/.claude/crew-tmp/ (crew-scratch; also listed in additionalDirectories so subprocesses can write here without prompting).",
+      "matcher_quirks": "Two Bash matchers that exist only to work around matcher-expansion corner cases — Bash(git init:*) covers the colon-prefixed invocation pattern that bare Bash(git *) wouldn't match, and Bash(/bin/ls:*) handles a PATH-resolved ls callsite the bare Bash(ls*) matcher misses."
+    },
+    "deny": {
+      "destructive_bash": "Filesystem wipeout — rm -rf /, ~, ., *; mkfs; dd to /dev/*; chmod 777. Hard-blocked because the recovery cost is too high for an agent turn to own.",
+      "privilege_escalation": "sudo, su, doas, pkexec — any ask for elevated privileges should come from the human, not the agent.",
+      "force_push": "--no-verify (skips hooks), --force / -f, push origin +* — rewriting shared history bypasses the human checkpoint; keep it gated at the deny layer.",
+      "destructive_git": "reset --hard, clean -fdx, checkout -- ., branch -D main|master — all destroy local work or protected refs.",
+      "destructive_docker": "volume rm/prune, system prune, rm -f, stop/kill — losing a container's state is hard to undo and Portal/Pricing share the porcing volume.",
+      "curl_pipe_shell": "curl|bash, curl|sh, wget|bash, wget|sh — the canonical supply-chain footgun.",
+      "secrets": "Read/Grep against ~/.ssh/, *.gpg/*.asc, AWS SSO + CLI caches, accessKeys.csv, .netrc, docker config.json, .vault-token. These must never be shown to a model."
+    },
+    "ask": {
+      "destructive_confirmable": "rm -rf * / rm -r * — destructive but sometimes legitimate (scratch cleanup). Human gates each instance.",
+      "env_introspection": "env, printenv — may surface secrets from shell env; ask before dumping.",
+      "system_mgmt": "launchctl, brew, kill -9, pkill — scheduled tasks and global software state; confirm before mutating.",
+      "version_manager_writes": "Network-fetching + compile operations on language version managers — `asdf install`, `asdf plugin add`, `asdf plugin update`, `pyenv install`, `nvm install`, `rbenv install`. Mirrors the `brew *` ask gate (same trust class: download + compile arbitrary upstream code; `asdf plugin add <name> <url>` clones an arbitrary git repo, `asdf plugin update` git-pulls from potentially-modified upstream). Local-state version-manager ops (list, current, which, reshim, global, local, plugin remove) stay in allow (see `_notes.allow.version_managers`). Added 2026-05-03 (mission 2026-05-03-3) per Shell Safety Reviewer's brew-inconsistency finding; `plugin add` / `plugin update` added same mission per Shell Safety Reviewer's diff-review Warning W1.",
+      "docker_mutating": "docker run/exec/compose up/down/restart/build — start/stop services. Read counterparts are in allow.docker_read.",
+      "postgres": "pg_dump, pg_restore, psql — DB interactions against porcing; gate each one.",
+      "main_branch_push": "git push origin main|master — pushing to protected branches always needs a human checkpoint.",
+      "mcp_writes": "Atlassian create/edit/transition/comment, Slack send/schedule, CircleCI run_pipeline/rerun — outbound actions that change shared state.",
+      "env_files": "Read/Grep against **/.env*, credentials*, *secret*, *.token, *password*, *.pem, *.key — possible secret exposure; confirm case by case.",
+      "shell_profiles": "Read/Write/Edit against ~/.bashrc, ~/.bash_profile, ~/.zshrc, ~/.zshenv, ~/.zprofile — shell startup files; any change affects every future terminal session."
+    },
+    "hooks": {
+      "PostToolUse": "After Edit/Write/Bash, update the code-review-graph incrementally. Flock-guarded and non-blocking.",
+      "SessionStart": "Two hooks: (1) code-review-graph status summary; (2) dev-tools check-handoff warns on stale HANDOFF.md.",
+      "Stop": "At turn end, code-review-graph detect-changes --brief surfaces risk-scored structural impact.",
+      "UserPromptSubmit": "Enforces MISSION_LOG.md initialization on prompts with execution intent — fires only when the working dir lacks a mission log and the prompt contains an intent keyword.",
+      "SubagentStop": "Logs sub-agent completion to MISSION_LOG.md — one `Dispatch of <Role> completed` line per finish.",
+      "PreToolUse": "Before Bash/Edit/Write, warn if the command or target path reaches into another Decisiv repo. Advisory (exit 0), skips safe-prefix commands and data-only path mentions."
+    },
+    "skillListingBudgetFraction": "Fraction of context window reserved for the skill listing sent to Claude. Schema (per v2.1.131 binary, `claude-code` Zod): `number().gt(0).lte(1).optional()`, default 0.01 = 1%. Raised to 0.02 (2%) on 2026-05-06 (mission 2026-05-06) after `/doctor` reported 1.3% utilization → 7 skill descriptions truncated (named: prep, hooks, address-reviews, +4 more). Disable-skills path was investigated but rejected — JSONL grep underestimated invocation counts for several mission-flow-critical skills (e.g., /crew-stats and /validate-artifacts run at every mission close, but the user-visible invocation channel apparently doesn't surface in session JSONL grepping that I performed). 0.02 ≈ 50% headroom over observed 1.3% need. The env var `SLASH_COMMAND_TOOL_CHAR_BUDGET` is an absolute-character override that takes precedence over this fraction when set; we use the fraction so the budget scales with context-window growth. Public docs (https://code.claude.com/docs/en/skills) only document the env var as of 2026-05-06; the fraction key is binary-resident but undocumented — confirm with `/doctor` after each Claude Code upgrade in case the schema changes."
+  },
+  "additionalDirectories": [
+    "~/.claude/crew-tmp"
+  ],
+  "skipAutoPermissionPrompt": true
 }
