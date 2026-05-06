@@ -41,3 +41,5 @@ HANDOFF.md
 ### Other tools ###
 .code-review-graph/
 .code-review-graphignore
+### Personal workflow exploration (per feedback_workflow_changes_dev_tools_only.md) ###
+.harness/
