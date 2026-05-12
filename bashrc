@@ -26,6 +26,9 @@ export PATH="/usr/local/bin:${PATH}"
 export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/.bin:${PATH}"
 export PATH="${HOME}/bin:${PATH}"
+if [ -d "${HOME}/Decisiv/bin" ]; then
+  export PATH="${HOME}/Decisiv/bin:${PATH}"
+fi
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-256color'
