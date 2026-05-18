@@ -36,6 +36,7 @@ GEMINI.md
 ### Crew ###
 MISSION_LOG.md
 HANDOFF.md
+.crew/
 ### Skills ###
 .srm-gateway.toml
 ### Other tools ###
