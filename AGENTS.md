@@ -36,7 +36,7 @@ reload tmux.
 | `gitignore_global`, `gitmessage`, `gittheme` | Global ignores, commit template, diff colors |
 | `Brewfile` | Homebrew dependencies |
 | `bin/` | Custom scripts, linked to `~/.bin/` |
-| `claude/` | Claude Code user config (`CLAUDE.md`, `settings.json`), linked into `~/.claude/` |
+| `claude/` | Claude Code global instructions (`CLAUDE.md`), linked into `~/.claude/`. `~/.claude/settings.json` is not tracked: Claude Code rewrites it in place and it holds machine-specific data |
 
 ### Vim and Neovim share one config
 
