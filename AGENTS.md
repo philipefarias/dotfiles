@@ -101,7 +101,9 @@ Changes land directly on `master` and are pushed to `origin`. There are no
 pull requests and no CI, so run the checks above before committing.
 
 - **Atomic**: one logical change per commit.
-- **GPG-signed**: `commit.gpgsign = true`; do not bypass it.
+- **Signed**: `commit.gpgsign = true`. Signing uses an SSH key
+  (`gpg.format = ssh`), configured per machine in `~/.gitconfig.local`; do
+  not bypass it.
 - **Subject**: imperative mood, under 50 characters, no conventional-commit
   prefixes (`feat:`, `fix:`). Common verbs: Add, Remove, Replace, Change, Fix,
   Update, Set, Use, Organize, Refactor.
