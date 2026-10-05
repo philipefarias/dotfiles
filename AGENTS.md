@@ -16,7 +16,7 @@ and Linux: Bash, Vim/Neovim, tmux, and Git.
 | Shell syntax | `bash -n bashrc && bash -n install` | |
 | Shell lint | `shellcheck bin/* install` | If shellcheck is installed |
 | Editor health | `nvim --headless +qa` | Must exit 0 with no error output; `:checkhealth` for detail |
-| Plugin updates | `:PlugUpdate`, `:TSUpdate`, `:MasonUpdate` | From inside Neovim |
+| Plugin updates | `:PlugUpdate`, `:TSUpdate` | From inside Neovim |
 
 There is no test suite. A change is ready when the relevant checks above pass
 and the affected tool starts cleanly: open a new shell, start Neovim, or
@@ -57,13 +57,13 @@ directory. `vimrc` uses `has('nvim')` / `!has('nvim')` guards throughout:
 
 - **Dracula everywhere**: Vim, airline, bat (`BAT_THEME`), tmux via tmuxline.
 - **Plugin managers**: vim-plug for Vim/Neovim, TPM for tmux.
-- **Linting**: ALE with `ale_disable_lsp = 1`; LSP is configured separately.
+- **Linting**: ALE, with its LSP integration off (`ale_disable_lsp = 1`). There
+  is no LSP client, completion, or formatter setup; those plugins were removed.
 - **Testing in the editor**: vim-test + neoterm, running in a background terminal.
 - **Search**: ripgrep for both the shell (`rg`) and Vim (`:Ack`).
 - **tmux prefix**: `C-a`.
 - **Leader key**: `\` (the default). Rails navigation under `<leader>r`
-  (`rc` controller, `rm` model, `rv` view, `rs` spec, `rf` factory). LSP: `gd`,
-  `gr`, `K`, `<leader>rn`, `<leader>ca`. Diagnostics: `[d`, `]d`, `<leader>d`.
+  (`rc` controller, `rm` model, `rv` view, `rs` spec, `rf` factory).
 - **Graceful fallbacks**: aliases that replace standard commands (bat, eza, fd,
   zoxide) check `command -v` first and keep the fallback.
 - **Cross-platform**: `bashrc` uses `uname` checks for macOS vs Linux and
@@ -78,8 +78,6 @@ directory. `vimrc` uses `has('nvim')` / `!has('nvim')` guards throughout:
   `if !has('nvim')`. Settings that must apply after load go after `plug#end()`.
   A new module needs its `require` added to the `vimrc` Lua block in load order.
   Run `:PlugInstall`.
-- **LSP server**: add it to Mason's `ensure_installed` and configure it with
-  `lspconfig`. Keep compatibility with Neovim 0.10+.
 - **New dotfile**: create it at the repo root and add it to the `for file in`
   loop in `install`.
 - **Shell tool or alias**: add it to the matching `bashrc` section, guard it
