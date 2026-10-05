@@ -23,10 +23,10 @@ else
 fi
 export PATH="/usr/local/sbin:${PATH}"
 export PATH="/usr/local/bin:${PATH}"
-export PATH="${HOME}/.local/bin:${PATH}"
 export PATH="${HOME}/.bin:${PATH}"
 export PATH="${HOME}/bin:${PATH}"
 export PATH="${HOME}/Decisiv/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${PATH}"
 
 # Unbreak broken, non-colored terminal
 export TERM='xterm-256color'
