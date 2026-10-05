@@ -89,6 +89,10 @@ directory. `vimrc` uses `has('nvim')` / `!has('nvim')` guards throughout:
 - **tmux binding**: add it to `tmux.conf` with a comment, clear of the `C-a`
   prefix and existing bindings; plugin lines go before the TPM `run` line.
 
+Before removing a plugin, check what else depends on it; before adding one,
+check nothing already installed covers the same job. Keep the tmux/Vim
+integration (pane navigation, copy and paste) working.
+
 Style: two-space indentation in Vimscript and Lua, double-quote comments in
 Vimscript, alphabetical order where a file already uses it. Keep comments short
 and free of company or project names.
