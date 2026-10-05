@@ -4,7 +4,7 @@ Personal development environment configuration for Vim/Neovim, Tmux, and Bash on
 
 ## Features
 
-- **Neovim/Vim**: LSP support (JavaScript/TypeScript, Ruby/Rails), autocompletion, Treesitter syntax
+- **Neovim/Vim**: Treesitter syntax, ALE linting, Rails navigation, vim-test
 - **Tmux**: Terminal multiplexer with plugin management
 - **Bash**: Optimized shell with git prompt and completions
 - **Git**: Aliases, signed commits, custom workflow
@@ -113,10 +113,8 @@ Additional utilities:
 ├── install               # Installation script
 ├── nvim/                 # Neovim Lua configuration
 │   └── lua/config/       # Modular Lua configs
-│       ├── lsp.lua       # LSP and Mason setup
-│       ├── completion.lua # Autocompletion
+│       ├── filetypes.lua # Filetype detection for dotfiles
 │       ├── treesitter.lua # Syntax highlighting
-│       ├── formatting.lua # Formatters and linters
 │       ├── editor.lua    # Editor enhancements
 │       └── keymaps.lua   # Additional keymaps
 └── bin/                  # Custom scripts
@@ -139,11 +137,10 @@ git pull
 Update components:
 
 - **Vim plugins**: `:PlugUpdate` in Neovim
-- **LSP servers**: `:MasonUpdate` in Neovim
 - **Treesitter parsers**: `:TSUpdate` in Neovim
 - **Tmux plugins**: `<prefix> + U` in Tmux (or `<prefix> + I` to install new plugins)
 
-**Note**: On first launch, Neovim automatically installs configured LSP servers (Mason) and syntax parsers (Treesitter) based on your `vimrc` settings.
+**Note**: On first launch, Neovim automatically installs the Treesitter parsers listed in `nvim/lua/config/treesitter.lua`.
 
 ## Customization
 
