@@ -2,7 +2,7 @@
 
 ## Writing Style
 
-Canonical base: `~/Decisiv/dev-tools/workflows/writing-style.md`. Layered per-context conventions in `~/Decisiv/dev-tools/workflows/conventions/`. Most-specific wins. Read the base before your first writing-heavy task in a session.
+Run `crew conventions writing` before your first writing-heavy task in a session; `crew conventions --list` names the per-context conventions. Layers print broad to specific; the most specific wins. "no rule declared" means none exists: never infer one from recent artifacts.
 
 ## Git Commits
 
@@ -12,7 +12,7 @@ Canonical base: `~/Decisiv/dev-tools/workflows/writing-style.md`. Layered per-co
 
 ## PR & Code Review Conventions
 
-Authoring your own PRs (descriptions + replying to reviewers): `~/Decisiv/dev-tools/workflows/conventions/pr-as-author.md`. Reviewing teammates' PRs: `~/Decisiv/dev-tools/workflows/conventions/pr-as-reviewer.md`. Both layer on `workflows/writing-style.md`.
+Authoring your own PRs (descriptions + replying to reviewers): `crew conventions pr-author`. Reviewing teammates' PRs: `crew conventions pr-review`. Both layer on `crew conventions writing`.
 
 ## Prefer patterns over enumeration
 
@@ -28,4 +28,4 @@ When modifying code that was described elsewhere (PR descriptions, READMEs, comm
 
 ## code-review-graph maintenance
 
-code-review-graph is installed as an MCP server across all Decisiv projects. After any package upgrade (`uv tool upgrade code-review-graph`), the graphs need rebuilding. At the start of each session, run `bash ~/Decisiv/dev-tools/scripts/check-crg-version.sh` — if it reports a version mismatch, tell the user and offer to run `bash ~/Decisiv/dev-tools/scripts/rebuild-crg.sh`.
+code-review-graph is user-provisioned (MCP server + settings.json hooks); crew reads it optionally and does not own it. After a package upgrade (`uv tool upgrade code-review-graph`) the graphs need rebuilding. At the start of each session, compare the version from `code-review-graph --version` with `~/.code-review-graph-last-build-version`; on a mismatch, tell the user and offer to run `code-review-graph build` in each repo `code-review-graph repos` lists, then write the new version to that file.
