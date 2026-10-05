@@ -55,7 +55,11 @@ Create `~/.gitconfig.local` for personal Git settings:
 [user]
     name = Your Name
     email = your.email@example.com
-    signingkey = YOUR_GPG_KEY
+    signingkey = ~/.ssh/id_ed25519.pub
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/allowed_signers
 [credential "https://github.com"]
     username = yourusername
 ```
