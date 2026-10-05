@@ -49,3 +49,4 @@ temp/
 
 # Override global gitignore for files this repo intentionally tracks
 !AGENTS.md
+!/claude/CLAUDE.md
