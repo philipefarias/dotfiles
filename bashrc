@@ -161,13 +161,5 @@ if command -v zoxide &>/dev/null; then
   eval "$(zoxide init bash)"
 fi
 
-# Okta AWS CLI
-if [[ -f "$HOME/.okta/bash_functions" ]]; then
-  . "$HOME/.okta/bash_functions"
-fi
-if [[ -d "$HOME/.okta/bin" && ":$PATH:" != *":$HOME/.okta/bin:"* ]]; then
-  PATH="$HOME/.okta/bin:$PATH"
-fi
-
 # Local overrides (not tracked in dotfiles — API tokens, machine-specific config)
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
