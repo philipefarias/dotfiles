@@ -133,5 +133,7 @@ Never commit secrets (keys, tokens, `.gpg` files), work-specific config
   was removed by a Homebrew upgrade still resolves, then fails with
   `bad interpreter` on every new shell.
 - **`gitignore_global` ignores `AGENTS.md` and `CLAUDE.md` everywhere**; this
-  repo's `.gitignore` re-includes `AGENTS.md` so it can be tracked here.
+  repo's `.gitignore` re-includes `AGENTS.md` and `claude/CLAUDE.md` so both
+  can be tracked here. After touching an ignore rule, `git ls-files -ci
+  --exclude-standard` must print nothing.
 - **GUI-only settings don't belong here**: this setup is terminal-only.
