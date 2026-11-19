@@ -72,10 +72,7 @@ Type `?` in your terminal for a comprehensive keybinding reference covering Bash
 
 **Vim/Neovim:**
 
-- `gd` - Go to definition
-- `K` - Hover documentation
-- `<leader>rn` - Rename symbol
-- `<leader>ca` - Code actions
+- `<leader>t/T/a/l` - Test nearest/file/suite/last (vim-test)
 - `<leader>rc/rm/rv/rs/rf` - Rails navigation (controller/model/view/spec/factory)
 
 **Tmux:**
