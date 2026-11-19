@@ -33,7 +33,6 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     -- Quick RSpec commands
     vim.keymap.set('n', '<leader>rt', ':TestNearest<CR>', { buffer = true, desc = 'Run nearest test' })
-    vim.keymap.set('n', '<leader>rf', ':TestFile<CR>', { buffer = true, desc = 'Run test file' })
     vim.keymap.set('n', '<leader>ra', ':TestSuite<CR>', { buffer = true, desc = 'Run all tests' })
     vim.keymap.set('n', '<leader>rl', ':TestLast<CR>', { buffer = true, desc = 'Run last test' })
   end,
