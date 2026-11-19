@@ -53,7 +53,9 @@ directory. `vimrc` uses `has('nvim')` / `!has('nvim')` guards throughout:
   4. `keymaps.lua` — Rails navigation and RSpec keymaps, buffer-local via
      FileType autocmds
   5. `ai.lua` — AI assistants (experimental). Claude Code bridge
-     (claudecode.nvim) to a `claude` session in a tmux pane. `NVIM_AI=0`
+     (claudecode.nvim) to a `claude` session in a tmux pane, and Copilot
+     ghost-text suggestions (copilot.lua, set up on first InsertEnter,
+     never attached to `.env`, key, pem or credentials files). `NVIM_AI=0`
      skips both the plugins (vimrc Plug group) and the module
 
 ## Conventions
@@ -61,7 +63,9 @@ directory. `vimrc` uses `has('nvim')` / `!has('nvim')` guards throughout:
 - **Dracula everywhere**: Vim, airline, bat (`BAT_THEME`), tmux via tmuxline.
 - **Plugin managers**: vim-plug for Vim/Neovim, TPM for tmux.
 - **Linting**: ALE, with its LSP integration off (`ale_disable_lsp = 1`). There
-  is no LSP client, completion, or formatter setup; those plugins were removed.
+  is no language LSP client, completion menu, or formatter setup; those
+  plugins were removed. Copilot ghost text (`ai.lua`) is the only completion
+  source.
 - **Testing in the editor**: vim-test + neoterm, running in a background terminal.
 - **Search**: ripgrep for both the shell (`rg`) and Vim (`:Ack`).
 - **tmux prefix**: `C-a`.

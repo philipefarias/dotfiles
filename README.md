@@ -5,7 +5,7 @@ Personal development environment configuration for Vim/Neovim, Tmux, and Bash on
 ## Features
 
 - **Neovim/Vim**: Treesitter syntax, ALE linting, Rails navigation, vim-test,
-  Claude Code bridge (Neovim only, experimental)
+  Claude Code bridge and Copilot suggestions (Neovim only, experimental)
 - **Tmux**: Terminal multiplexer with plugin management
 - **Bash**: Optimized shell with git prompt and completions
 - **Git**: Aliases, signed commits, custom workflow
@@ -77,6 +77,8 @@ Type `?` in your terminal for a comprehensive keybinding reference covering Bash
 - `<leader>rc/rm/rv/rs/rf` - Rails navigation (controller/model/view/spec/factory)
 - `<leader>cs/cb` - Send selection/buffer to Claude Code; `<leader>ca/cd` - accept/deny its diff.
   Run `claude` in a tmux pane, then `/ide` to connect. Start Neovim with `NVIM_AI=0` to disable.
+- `<M-l>` - Accept Copilot suggestion (insert mode); `<M-]>/<M-[>` cycle, `<C-]>` dismiss.
+  Run `:Copilot auth` once.
 
 **Tmux:**
 

@@ -81,6 +81,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " NVIM_AI=0 skips loading them; don't run :PlugClean in that mode
 if has('nvim') && $NVIM_AI !=# '0'
   Plug 'coder/claudecode.nvim'                    " Claude Code IDE bridge
+  Plug 'zbirenbaum/copilot.lua'                   " Copilot inline suggestions
 endif
 
 " Color schemes and some bling
