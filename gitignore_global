@@ -33,6 +33,7 @@ opencode.json
 .windsurfrules
 GEMINI.md
 /.claude/
+**/.claude/settings.local.json
 ### Crew ###
 MISSION_LOG.md*
 HANDOFF.md
