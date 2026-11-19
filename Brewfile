@@ -39,6 +39,9 @@ brew "httpie"           # User-friendly curl alternative
 # Development tools
 brew "asdf"             # Version manager for languages
 
+# AI assistants
+cask "claude-code@latest"  # Claude Code CLI (Neovim bridge: claudecode.nvim)
+
 # Security
 brew "gnupg"
 brew "pinentry-mac"

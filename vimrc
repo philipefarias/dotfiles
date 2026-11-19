@@ -77,6 +77,12 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+" AI assistants (Neovim only, configured in nvim/lua/config/ai.lua)
+" NVIM_AI=0 skips loading them; don't run :PlugClean in that mode
+if has('nvim') && $NVIM_AI !=# '0'
+  Plug 'coder/claudecode.nvim'                    " Claude Code IDE bridge
+endif
+
 " Color schemes and some bling
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -288,5 +294,6 @@ require('config.filetypes')
 require('config.treesitter')
 require('config.editor')
 require('config.keymaps')
+require('config.ai')
 EOF
 endif

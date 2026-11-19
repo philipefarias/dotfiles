@@ -52,6 +52,9 @@ directory. `vimrc` uses `has('nvim')` / `!has('nvim')` guards throughout:
   3. `editor.lua` — autopairs, Comment.nvim, which-key and its key groups
   4. `keymaps.lua` — Rails navigation and RSpec keymaps, buffer-local via
      FileType autocmds
+  5. `ai.lua` — AI assistants (experimental). Claude Code bridge
+     (claudecode.nvim) to a `claude` session in a tmux pane. `NVIM_AI=0`
+     skips both the plugins (vimrc Plug group) and the module
 
 ## Conventions
 
@@ -63,7 +66,8 @@ directory. `vimrc` uses `has('nvim')` / `!has('nvim')` guards throughout:
 - **Search**: ripgrep for both the shell (`rg`) and Vim (`:Ack`).
 - **tmux prefix**: `C-a`.
 - **Leader key**: `\` (the default). Rails navigation under `<leader>r`
-  (`rc` controller, `rm` model, `rv` view, `rs` spec, `rf` factory).
+  (`rc` controller, `rm` model, `rv` view, `rs` spec, `rf` factory), tests
+  under `<leader>t/T/a/l`, Claude Code under `<leader>c`.
 - **Graceful fallbacks**: aliases that replace standard commands (bat, eza, fd,
   zoxide) check `command -v` first and keep the fallback.
 - **Cross-platform**: `bashrc` uses `uname` checks for macOS vs Linux and
