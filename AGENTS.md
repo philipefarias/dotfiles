@@ -136,4 +136,9 @@ Never commit secrets (keys, tokens, `.gpg` files), work-specific config
   repo's `.gitignore` re-includes `AGENTS.md` and `claude/CLAUDE.md` so both
   can be tracked here. After touching an ignore rule, `git ls-files -ci
   --exclude-standard` must print nothing.
+- **Tools write through the `~/.gitconfig` symlink**: Git Credential
+  Manager (its installer or `configure`) can add a `[credential] helper`
+  line to the tracked `gitconfig`. The helper belongs in
+  `~/.gitconfig.local`; discard the diff (`git checkout -- gitconfig`),
+  never commit it.
 - **GUI-only settings don't belong here**: this setup is terminal-only.
